@@ -1,308 +1,569 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Fallou Tambedou</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YOON — Votre assistant juridique  (Legal‑Tech Sénégal)</title>
 
-  <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link rel="icon" href="image/bakhCode.png" sizes="16x16" type="image/png">
-  <link rel="icon" href="image/bakhCode.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="image/bakhCode.png" sizes="192x192" type="image/png">
-  <link rel="apple-touch-icon" href="image/bakhCode.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="msapplication-TileImage" content="image/bakhCode.png">
-  <meta name="msapplication-TileColor" content="#0e6b1d">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+    createChat({
+        webhookUrl: 'http://localhost:5678/webhook/47f73a41-52a0-43df-972a-b050e605b49c/chat',
+        webhookConfig: {
+            method: 'POST',
+            headers: {}
+        },
+        target: '#n8n-chat',
+        mode: 'embedded',
+        chatInputKey: 'chatInput',
+        chatSessionKey: 'sessionId',
+        loadPreviousSession: true,
+        metadata: {},
+        showWelcomeScreen: false,
+        defaultLanguage: 'en',
+        initialMessages: [
+            'Je m\'appelle YOON (LOI). Comment puis-je vous aider aujourd\'hui ?'
+        ],
+        i18n: {
+            en: {
+                title: 'Salut ! 🤖',
+                subtitle: "Démarrez une conversation. Nous sommes là pour vous aider 24h/24 et 7j/7."
+            }
+        },
+        enableStreaming: false
+    });
+</script>
 <header>
   <nav class="nav container">
     <div class="brand">
-      <img class="logo" src="image/bakhCode.png" alt="BakhCode Logo">
-      <div class="muted">Fallou Tambedou</div>
+      <img src="image/yoon.jpg" alt="yoon" class="logo">
+      <div class="muted">Legal‑Tech Sénégal</div>
     </div>
+
 
     <div class="nav-links">
-      <a href="#home">Accueil</a>
-      <a href="#about">À propos</a>
-      <a href="#skills">Compétences</a>
-      <a href="#projects">Projets</a>
-      <a href="#education">Formation</a>
-      <a href="#contact" class="cta">Contact</a>
+      <a href="#home" data-lang="nav-home">Accueil</a>
+      <a href="#services" data-lang="nav-services">Services</a>
+      <a href="#features" data-lang="nav-features">Fonctionnalités</a>
+      <a href="mentorat.html" data-lang="nav-mentorat">Mentorat</a>
+      <a href="#about" data-lang="nav-about">À propos</a>
+      <a href="inscription.html" data-lang="nav-inscription" class="cta">Inscription</a>
     </div>
 
-    <button class="menu-toggle" aria-label="menu">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </button>
+    <!-- Language Selector -->
+       <div class="lang-selector">
+      <select id="langSelect">
+        <option value="fr">Fr</option>
+        <option value="en">En</option>
+        <option value="wo">Wol</option>
+        <option value="ar">Ar</option>
+      </select>
+    </div>
+    <button class="menu-toggle" aria-label="menu">☰</button>
   </nav>
 </header>
 
+<main>
   <!-- HERO -->
-  <main>
-    <section id="home" class="hero">
-      <div class="container hero-grid">
-        <div class="hero-left glass">
-          <h1>Bonjour, <span id="typewriter"></span></h1>
-          <p class="lead">Je construis des applications web & mobiles modernes — projets notables : <strong>Bakh-Code</strong>. Je transforme les idées en code, avec élégance et performance.</p>
-
-          <div class="hero-ctas">
-            <a class="btn primary" href="#projects">Mes projets</a>
-            <a class="btn outline" href="#contact">Me contacter</a>
-          </div>
-          <ul class="social-inline">
-            <li><a href="https://www.linkedin.com/in/fallou-tambedou-a2b689375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://github.com/bakh05" class="github" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://x.com/falloutambedou2?s=11" class="twitter" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a></li>
-            <li><a href="https://wa.me/221763348279" class="whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
-          </ul>
-        </div>
-
-        <div class="hero-right">
-          <div class="card-stacked">
-            <img src="image/Digital.jpg" alt="Photo de profil" class="avatar">
-            <div class="stats glass">
-              <div><strong>4</strong><span>Années</span><small>d'expérience</small></div>
-              <div><strong>6+</strong><span>Projets</span><small>Livrés</small></div>
-              <div><strong>100%</strong><span>Satisfaction</span><small>Clients</small></div>
-            </div>
-          </div>
-        </div>
+  <section id="home" class="hero" style="background-image: url('image/AI%20in%20Legal.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+    <div class="hero-left container" style="position: relative; z-index: 1;">
+      <h1 class="reveal" data-lang="hero-title"><span class="letter">xaam ça yoon.</span><span class="muted">Votre assistant juridique et Fiscalité</span>.</h1>
+      <p class="reveal" data-lang="hero-subtitle">Rendez le droit accessible : conseils rapides, génération de documents, simulateurs fiscaux et mise en relation avec des experts.</p>
+      <div class="buttons reveal">
+        <a class="btn btn-primary" href="inscription.html" data-lang="hero-signup">S'inscrire</a>
+        <a class="btn" href="https://wa.me/221766902590" target="_blank" data-lang="hero-quote">Demander un devis</a>
       </div>
-    </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section container">
-      <div class="section-grid">
-        <div class="about-text glass">
-          <h2>À propos</h2>
-          <img src="image/fallu1.png" alt="Photo de Fallou Tambedou" class="about-image">
-          <p>Développeur full-stack basé au Sénégal, je conçois des produits numériques centrés utilisateur : sites vitrines, applications mobiles, systèmes bancaires . J'aime le design soigné, le code maintenable et l'impact réel.</p>
-
-          <ul class="about-list">
-            <li><strong>Spécialités :</strong>MySql, Oracle, PHP, JavaScript, Java, Python, Git, GitHub, WordPress</li>
-            <li><strong>Style :</strong>UI moderne, performance, sécurité</li>
-            <li><strong>Langues :</strong> Français, Anglais et Wolof</li>
-          </ul> 
+      <div class="services reveal" style="margin-top:22px">
+        <div class="service">
+          <h4 data-lang="hero-service1-title">Conseils instantanés</h4>
+          <p data-lang="hero-service1-desc">Réponses claires via le chatbot (IA) pour questions générales.</p>
         </div>
-
-        <div class="about-skillset">
-          <h3>Ce que je peux faire pour vous</h3>
-          <div class="skillbars">
-            <div class="skill">
-              <label>Frontend — HTML / CSS /JS</label>
-              <div class="bar"><span style="width: 92%"></span></div>
-            </div>
-            <div class="skill">
-              <label>Backend — docker / Java / php</label>
-              <div class="bar"><span style="width: 85%"></span></div>
-            </div>
-            <div class="skill">
-              <label>Mobile — Android (Java)</label>
-              <div class="bar"><span style="width: 78%"></span></div>
-            </div>
-          </div>
+        <div class="service">
+          <h4 data-lang="hero-service2-title">Générateur de contrats</h4>
+          <p data-lang="hero-service2-desc">Modèles prêts à remplir (CDD, bail, contrat de prestation).</p>
         </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section alt">
-      <div class="container">
-        <h2>Compétences</h2>
-        <div class="skills-grid">
-          <div class="skill-card glass">
-            <i class="fa-solid fa-code"></i>
-            <h4>Développement Web</h4>
-            <p>HTML, CSS, JS, React, Tailwind, performance</p>
-          </div>
-          <div class="skill-card glass">
-            <i class="fa-solid fa-server"></i>
-            <h4>Backend</h4>
-            <p>Node.js, Express, Java, APIs REST, authentification</p>
-          </div>
-          <div class="skill-card glass">
-            <i class="fa-solid fa-mobile-screen-button"></i>
-            <h4>Mobile</h4>
-            <p>Android (Java), expériences utilisateur natives</p>
-          </div>
-          <div class="skill-card glass">
-            <i class="fa-solid fa-shield-halved"></i>
-            <h4>Sécurité & CI</h4>
-            <p>Bonnes pratiques, tests unitaires, déploiement CI/CD</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section container">
-      <h2>Projets</h2>
-      <p class="muted">Sélection de projets récents. Clique sur un projet pour voir plus de détails.</p>
-
-      <div class="projects-grid">
-        <!-- Projet 1 -->
-        <article class="project-card glass">
-          <img loading="lazy" src="image/gestion.png" alt="Gestion">
-          <div class="project-body">
-            <h3>LeppayBakh — Système gestionnaire de tâche</h3>
-            <p>Plateforme de gestion (clients, comptes, stock entre société) avec interface de diagramme</p>
-            <div class="project-tags"><span>html</span><span>css</span><span>javascript</span><span>php</span> </div>
-            <div class="project-actions">
-              <a class="btn small" href="#" onclick="openProject(event, 'LeppayBakh')">Détails</a>
-              <a class="btn ghost" href="#" target="_blank">Voir code</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Projet 2 -->
-        <article class="project-card glass">
-          <img src="image/fast-food.png" alt="Fast-Food">
-          <div class="project-body">
-            <h3>FastFood Express — App mobile</h3>
-            <p>Application Android Java. Menu dynamique, panier, commandes et suivi.</p>
-            <div class="project-tags"><span>Android</span><span>Java</span></div>
-            <div class="project-actions">
-              <a class="btn small" href="#" onclick="openProject(event, 'FastFood')">Détails</a>
-              <a class="btn ghost" href="#" target="_blank">Prototype</a>
-            </div>
-          </div>
-        </article>
-        <!-- Projet 3 -->
-        <article class="project-card glass">
-          <img loading="lazy" src="image/vote.png" alt="Vote">
-          <div class="project-body">
-            <h3>Vote — Site web</h3>
-            <p>Plateforme de vote. Menu dynamique, candidats, sécurisé.</p>
-            <div class="project-tags"><span>html</span><span>css</span><span>javascript</span><span>php</span></div>
-            <div class="project-actions">
-              <a class="btn small" href="#" onclick="openProject(event, 'vote')">Détails</a>
-              <a class="btn ghost" href="#" target="_blank">Prototype</a>
-            </div>
-          </div>
-        </article>
-         <!-- Projet  -->
-        <article class="project-card glass">
-          <img loading="lazy" src="image/yoon.png" alt="Yoon">
-          <div class="project-body">
-            <h3>Legal-Tech — Plateforme</h3>
-            <p>Développé par HTML/CSS/JS/PHP. Menu dynamique, sécurisé, service et suivi.</p>
-            <div class="project-tags"><span>html</span><span>css</span><span>javascript</span><span>php</span><span>docker</span><span>agence AI</span></div>
-            <div class="project-actions">
-              <a class="btn small" href="#" onclick="openProject(event, 'legal-tech')">Détails</a>
-              <a class="btn ghost" href="#" target="_blank">Prototype</a>
-          </div>
-        </article>
-
-        <!-- Add more project cards as needed -->
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section id="education" class="section alt">
-      <div class="container">
-        <h2>Formation</h2>
-    <div class="timeline">
-          <div class="timeline-item glass">
-            <h4>Licence en Informatique de gestion</h4>
-            <span class="muted">ENSUP Afrique / 2024 - 2025</span>
-            <p>Formation spécialisée en informatique de gestion.</p>
-          </div>
-          <div class="timeline-item glass">
-            <h4>Licence 2 en Droit et informatique/DIL</h4>
-            <span class="muted">Université Numérique Cheikh Hamidou Kane / 2024 - 2025</span>
-            <p>Études en droit et informatique.</p>
-          </div>
-          <div class="timeline-item glass">
-            <h4>Agence IA</h4>
-            <span class="muted">Autodidacte</span>
-            <p>Apprentissage autodidacte en intelligence artificielle.</p>
-          </div>
-          <div class="timeline-item glass">
-            <h4>Baccalauréat</h4>
-            <span class="muted">Lycée Mouhamadou Moustapha Mbacké de Diourbel / 2021 - 2022</span>
-            <p>Diplôme de baccalauréat obtenu.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section container">
-      <h2>Contact</h2>
-      <div class="contact-grid">
-        <form id="contactForm" class="contact-form glass" action="contact.php" method="post">
-          <label for="name">Nom</label>
-          <input id="name" name="name" required />
-
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required />
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-
-
-          <div id="formMessage" class="form-message"></div>
-          <small class="muted">N'hésitez pas à me contacter pour discuter de vos projets, idées ou collaborations potentielles. Que ce soit pour un devis, une consultation ou simplement pour échanger sur vos besoins en développement web et mobile, je suis là pour vous aider à concrétiser vos visions !</small>
-        </form>
-
-        <div class="contact-info">
-          <div class="card glass">
-            <h4>Restons en contact</h4>
-            <p>Email : <a href="mailto:falloutambedou05@gmail.com">falloutambedou05@gmail.com</a></p>
-            <p>WhatsApp : <a href="https://wa.me/221763348279" target="_blank">+221 76 334 8279</a></p>
-            <p>Projet phare : <strong>LeppayBakh</strong></p>
-          </div>
-
-          <div class="card glass">
-            <h4>Disponibilité</h4>
-            <p>Freelance / Contrat / Collaboration — Disponible</p>
-            <a class="btn" href="#projects">Voir mes projets</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Fallou Tambedou — Tous droits réservés.</p>
-      <div class="footer-actions">
-        <a href="#home" class="backtop" id="backTop" title="Retour en haut">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
       </div>
     </div>
-  </footer>
 
-  <!-- Floating WhatsApp -->
-  <a class="whatsapp-fab" href="https://wa.me/221763348279" target="_blank" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+    <div class="hero-right card-hero container">
+      <h3 style="margin-top:0" data-lang="hero-demo-title">Démo Chat</h3>
+      <p class="muted" data-lang="hero-demo-subtitle">remplie le formalite Demander.</p>
+      <div style="display:flex;gap:10px;margin-top:12px">
+        <input id="quick-q" placeholder="Ex: Ecrite votre nom et prenom ?" data-lang="hero-demo-input-placeholder" style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(176, 172, 172, 0.04);background:transparent;color:#000000">
+        <button id="ask-quick" class="btn" data-lang="hero-demo-ask">Poser</button>
+      </div>
+      <hr style="border:none;height:1px;background:rgba(255, 255, 255, 0.03);margin:14px 0">
+      <h4 data-lang="hero-demo-templates-title">Modèles rapides</h4>
+      <div style="display:flex">
+        <select id="docSelect">
+          <option value="Contrat de Prestation" data-lang="hero-demo-option1">Contrat de Prestation</option>
+          <option value="Lettre Mise en Demeure" data-lang="hero-demo-option2">Lettre Mise en Demeure</option>
+          <option value="Cession de Créance" data-lang="hero-demo-option3">Cession de Créance</option>
+          <option value="Contrat de Bail" data-lang="hero-demo-option4">Contrat de Bail</option>
+        </select>
+        <button id="telechargeBtn" class="btn" data-lang="hero-demo-generate">Générer</button>
+      </div>
+    </div>
+  </section>
 
-  <!-- Project Modal (simple) -->
-  <div id="projectModal" class="modal" aria-hidden="true">
-    <div class="modal-content glass">
-      <button class="modal-close" id="modalClose" aria-label="Fermer">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-      <div id="projectModalBody"></div>
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title reveal" data-lang="services-title">Nos services</h2>
+      <div class="grid reveal">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 3C17.5 3 22 6.58 22 11C22 15.42 17.5 19 12 19C10.76 19 9.57 18.82 8.47 18.5C5.55 21 2 21 2 21C2 21 4.33 17.97 4.7 17C4.14 15.87 3.8 14.61 3.8 13.25C3.8 8.58 7.95 4.8 12.2 4.8C12.2 4.8 12 3 12 3Z" fill="var(--accent)"/>
+            </svg>
+          </div>
+          <h3 data-lang="services-chatbot-title">Chatbot IA</h3>
+          <p class="muted" data-lang="services-chatbot-desc">Assistant instantané pour questions juridiques et fiscales. Intégration OpenAI possible.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 2H6C4.89 2 4 2.89 4 4V20C4 21.11 4.89 22 6 22H18C19.11 22 20 21.11 20 20V8L14 2M18 20H6V4H13V9H18V20Z" fill="var(--accent)"/>
+            </svg>
+          </div>
+          <h3 data-lang="services-generator-title">Générateur de documents</h3>
+          <p class="muted" data-lang="services-generator-desc">Création et téléchargement de contrats, lettres officielles et attestations.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 4C16.55 4 17 4.45 17 5S16.55 6 16 6 15 5.55 15 5 15.45 4 16 4M16 6.5C17.38 6.5 18.5 7.62 18.5 9S17.38 11.5 16 11.5 13.5 10.38 13.5 9 14.62 6.5 16 6.5M16 13C19.32 13 22 15.68 22 19V21H10V19C10 15.68 12.68 13 16 13Z" fill="var(--accent)"/>
+              <path d="M8 4C8.55 4 9 4.45 9 5S8.55 6 8 6 7 5.55 7 5 7.45 4 8 4M8 6.5C9.38 6.5 10.5 7.62 10.5 9S9.38 11.5 8 11.5 5.5 10.38 5.5 9 6.62 6.5 8 6.5M8 13C11.32 13 14 15.68 14 19V21H2V19C2 15.68 4.68 13 8 13Z" fill="var(--accent)" opacity="0.6"/>
+            </svg>
+          </div>
+          <h3 data-lang="services-connection-title">Mise en relation</h3>
+          <p class="muted" data-lang="services-connection-desc">Référencement d'avocats et experts fiscaux au Sénégal.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 2H17C18.11 2 19 2.9 19 4V20C19 21.11 18.11 22 17 22H7C5.9 22 5 21.11 5 20V4C5 2.9 5.9 2 7 2M7 4V8H17V4H7M7 10V12H9V10H7M11 10V12H13V10H11M15 10V12H17V10H15M7 14V16H9V14H7M11 14V16H13V14H11M15 14V16H17V14H15M7 18V20H9V18H7M11 18V20H13V18H11M15 18V20H17V18H15Z" fill="var(--accent)"/>
+            </svg>
+          </div>
+          <h3 data-lang="services-simulators-title">Simulateurs fiscaux</h3>
+          <p class="muted" data-lang="services-simulators-desc">Calculez impôts, TVA, et charges sociales avec guides pas‑à‑pas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="container">
+      <h2 class="section-title reveal" data-lang="features-title">Fonctionnalités</h2>
+      <div class="grid reveal">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 2H6C4.89 2 4 2.89 4 4V20C4 21.11 4.89 22 6 22H18C19.11 22 20 21.11 20 20V8L14 2M18 20H6V4H13V9H18V20Z" fill="var(--accent)"/>
+              <path d="M8 12H16V14H8V12M8 16H16V18H8V16M8 8H16V10H8V8Z" fill="var(--accent)" opacity="0.6"/>
+            </svg>
+          </div>
+          <h4 data-lang="features-history-title">Historique et export</h4>
+          <p class="muted" data-lang="features-history-desc">Sauvegardez vos conversations, exportez PDF.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 2H6C4.89 2 4 2.89 4 4V20C4 21.11 4.89 22 6 22H18C19.11 22 20 21.11 20 20V8L14 2M18 20H6V4H13V9H18V20Z" fill="var(--accent)"/>
+              <circle cx="12" cy="14" r="2" fill="var(--accent)"/>
+            </svg>
+          </div>
+          <h4 data-lang="features-templates-title">Templates personnalisés</h4>
+          <p class="muted" data-lang="features-templates-desc">Créez des modèles de contrats selon votre entreprise.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 4C16.55 4 17 4.45 17 5S16.55 6 16 6 15 5.55 15 5 15.45 4 16 4M16 6.5C17.38 6.5 18.5 7.62 18.5 9S17.38 11.5 16 11.5 13.5 10.38 13.5 9 14.62 6.5 16 6.5M16 13C19.32 13 22 15.68 22 19V21H10V19C10 15.68 12.68 13 16 13Z" fill="var(--accent)"/>
+              <path d="M8 4C8.55 4 9 4.45 9 5S8.55 6 8 6 7 5.55 7 5 7.45 4 8 4M8 6.5C9.38 6.5 10.5 7.62 10.5 9S9.38 11.5 8 11.5 5.5 10.38 5.5 9 6.62 6.5 8 6.5M8 13C11.32 13 14 15.68 14 19V21H2V19C2 15.68 4.68 13 8 13Z" fill="var(--accent)" opacity="0.6"/>
+            </svg>
+          </div>
+          <h4 data-lang="features-experts-title">Connexion experts</h4>
+          <p class="muted" data-lang="features-experts-desc">Prise de rendez‑vous, paiement en ligne possible.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1M10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z" fill="var(--accent)"/>
+            </svg>
+          </div>
+          <h4 data-lang="features-security-title">Sécurité & conformité</h4>
+          <p class="muted" data-lang="features-security-desc">Chiffrement, stockage conforme et politique de confidentialité.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="container">
+      <h2 class="section-title reveal" data-lang="gallery-title">Photos de droit</h2>
+      <div class="gallery-grid reveal">
+        <div class="gallery-item">
+          <img src="image/droit.jpeg" alt="droit">
+          <div class="gallery-caption">
+            <h4 data-lang="gallery-item1-title">Le Droit au Sénégal</h4>
+            <p data-lang="gallery-item1-desc">Symbolisant le droit et la justice au Sénégal, ces institutions représentent les fondements de notre système juridique moderne.</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="image/justice.jpeg" alt="justice">
+          <div class="gallery-caption">
+            <h4 data-lang="gallery-item2-title">La Balance de la Justice</h4>
+            <p data-lang="gallery-item2-desc">La balance de la justice, garante de l'équité et de l'impartialité dans tous les domaines du droit sénégalais.</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="image/Le contrat.jpeg" alt="contrat">
+          <div class="gallery-caption">
+            <h4 data-lang="gallery-item3-title">Les Contrats Juridiques</h4>
+            <p data-lang="gallery-item3-desc">Un contrat signé représente la base des accords juridiques, essentiel pour la sécurité des transactions commerciales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- ABOUT -->
+  <section id="about" class="decorative-section">
+    <div class="container">
+      <div class="decorative-header">
+        <h2 class="section-title reveal" data-lang="about-title">À propos</h2>
+        <div class="decorative-line"></div>
+        <p class="reveal" data-lang="about-subtitle">Découvrez l'histoire et la mission de YOON, votre partenaire juridique au Sénégal.</p>
+      </div>
+
+      <div class="about-content">
+        <div class="about-main reveal">
+          <div class="about-text">
+            <h3 data-lang="about-mission-title">Notre Mission</h3>
+            <p data-lang="about-mission-desc1">YOON signifie « loi » en wolof. Nous aidons les particuliers et professionnels au Sénégal à comprendre et appliquer la loi via des outils numériques simples et accessibles.</p>
+            <p data-lang="about-mission-desc2">Notre plateforme révolutionne l'accès au droit en combinant intelligence artificielle, génération automatique de documents et mise en relation avec des experts qualifiés.</p>
+          </div>
+        </div>
+
+        <div class="about-features">
+          <div class="feature-card reveal">
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1H5C3.89 1 3 1.89 3 3V21C3 22.11 3.89 23 5 23H19C20.11 23 21 22.11 21 21V9M19 9H14V4H19V9Z" fill="var(--accent)"/>
+              </svg>
+            </div>
+            <h4 data-lang="about-feature1-title">Accessibilité</h4>
+            <p data-lang="about-feature1-desc">Rendre le droit accessible à tous, sans barrières linguistiques ou géographiques.</p>
+          </div>
+
+          <div class="feature-card reveal">
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="var(--accent)"/>
+                <circle cx="12" cy="12" r="3" fill="var(--accent)"/>
+              </svg>
+            </div>
+            <h4 data-lang="about-feature2-title">Innovation</h4>
+            <p data-lang="about-feature2-desc">Utiliser les dernières technologies pour simplifier les démarches juridiques.</p>
+          </div>
+
+          <div class="feature-card reveal">
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 4C16.55 4 17 4.45 17 5S16.55 6 16 6 15 5.55 15 5 15.45 4 16 4M16 6.5C17.38 6.5 18.5 7.62 18.5 9S17.38 11.5 16 11.5 13.5 10.38 13.5 9 14.62 6.5 16 6.5M16 13C19.32 13 22 15.68 22 19V21H10V19C10 15.68 12.68 13 16 13Z" fill="var(--accent)"/>
+                <path d="M8 4C8.55 4 9 4.45 9 5S8.55 6 8 6 7 5.55 7 5 7.45 4 8 4M8 6.5C9.38 6.5 10.5 7.62 10.5 9S9.38 11.5 8 11.5 5.5 10.38 5.5 9 6.62 6.5 8 6.5M8 13C11.32 13 14 15.68 14 19V21H2V19C2 15.68 4.68 13 8 13Z" fill="var(--accent)" opacity="0.6"/>
+              </svg>
+            </div>
+            <h4 data-lang="about-feature3-title">Communauté</h4>
+            <p data-lang="about-feature3-desc">Construire une communauté de professionnels et de citoyens informés.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title reveal" data-lang="contact-title">Contactez-nous</h2>
+      <p class="muted reveal" data-lang="contact-subtitle">Nous sommes là pour répondre à toutes vos questions. N'hésitez pas à nous contacter !</p>
+      <div class="contact-grid reveal">
+        <div class="contact-info">
+          <h3 data-lang="contact-info-title">Informations de contact</h3>
+          <p><strong data-lang="contact-address-label">Adresse :</strong> <span data-lang="contact-address-value">Dakar, Sénégal</span></p>
+          <p><strong data-lang="contact-phone-label">Téléphone :</strong> <a href="tel:+221766902590" data-lang="contact-phone-value">+221 76 690 2590</a></p>
+          <p><strong data-lang="contact-email-label">Email :</strong> <a href="mailto:contact@yoon.sn" data-lang="contact-email-value">contact@yoon.sn</a></p>
+          <div style="margin-top: 20px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.5!2d-17.4677!3d14.6937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDQxJzM1LjUiTiAxN8KwMjgnMDEuMyJX!5e0!3m2!1sfr!2ssn!4v1703123456789!5m2!1sfr!2ssn" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <form class="contact-form">
+          <h3 data-lang="contact-form-title">Envoyez-nous un message</h3>
+          <div class="form-group">
+            <label for="cabinet" data-lang="contact-form-cabinet-label">Sélectionnez un cabinet</label>
+            <select id="cabinet" name="cabinet" required>
+              <option value="" data-lang="contact-form-cabinet-placeholder">Sélectionnez un cabinet</option>
+              <option value="cabinet-droit-civil" data-lang="contact-form-cabinet-option1">Cabinet de Droit Civil</option>
+              <option value="cabinet-droit-penal" data-lang="contact-form-cabinet-option2">Cabinet de Droit Pénal</option>
+              <option value="cabinet-droit-commercial" data-lang="contact-form-cabinet-option3">Cabinet de Droit Commercial</option>
+              <option value="cabinet-droit-fiscal" data-lang="contact-form-cabinet-option4">Cabinet de Droit Fiscal</option>
+              <option value="cabinet-droit-travail" data-lang="contact-form-cabinet-option5">Cabinet de Droit du Travail</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="name" data-lang="contact-form-name-label">Nom</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" data-lang="contact-form-name-placeholder" required>
+          </div>
+          <div class="form-group">
+            <label for="email" data-lang="contact-form-email-label">Email</label>
+            <input type="email" id="email" name="email" placeholder="Votre email" data-lang="contact-form-email-placeholder" required>
+          </div>
+          <div class="form-group">
+            <label for="message" data-lang="contact-form-message-label">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Votre message" data-lang="contact-form-message-placeholder" required></textarea>
+          </div>
+          <button type="submit" class="btn" data-lang="contact-form-submit">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer style="background: linear-gradient(135deg, #08132d 0%, #071227 50%, #0a1a3a 100%); padding: 60px 20px 30px; position: relative; overflow: hidden;">
+  <!-- Animated background elements -->
+  <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 80%, rgba(234, 100, 100, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.1) 0%, transparent 50%), radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 70%); pointer-events: none;"></div>
+
+  <!-- Floating geometric shapes -->
+  <div style="position: absolute; top: 20%; left: 10%; width: 60px; height: 60px; background: rgba(234, 100, 100, 0.1); border-radius: 50%; animation: float 6s ease-in-out infinite;"></div>
+  <div style="position: absolute; top: 60%; right: 15%; width: 40px; height: 40px; background: rgba(14, 165, 233, 0.1); clip-path: polygon(50% 0%, 0% 100%, 100% 100%); animation: float 8s ease-in-out infinite reverse;"></div>
+  <div style="position: absolute; bottom: 20%; left: 20%; width: 30px; height: 30px; background: rgba(255, 255, 255, 0.1); transform: rotate(45deg); animation: float 7s ease-in-out infinite;"></div>
+
+  <div class="container" style="position: relative; z-index: 1; max-width: 1200px; margin: 0 auto;">
+    <!-- Main footer content -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-bottom: 40px;">
+      <!-- Company info -->
+      <div class="footer-section">
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+          <img src="image/yoon.jpg" alt="yoon" style="width: 50px; height: 50px; border-radius: 12px; margin-right: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+          <div>
+            <h3 style="color: #fff; margin: 0; font-size: 28px; font-weight: 700; background: linear-gradient(45deg, #fff, #e4e4e4); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">YOON</h3>
+            <p style="color: var(--muted); margin: 0; font-size: 14px;">Legal‑Tech Sénégal</p>
+          </div>
+        </div>
+        <p style="color: var(--muted); line-height: 1.7; margin: 0 0 20px 0;" data-lang="footer-description">Votre assistant juridique au Sénégal. Rendez le droit accessible avec nos outils numériques innovants et notre expertise locale.</p>
+
+        <!-- Newsletter signup -->
+        <div style="background: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
+          <h4 style="color: #fff; margin: 0 0 15px 0; font-size: 16px;" data-lang="footer-newsletter-title">Restez informé</h4>
+          <div style="display: flex; gap: 10px;">
+            <input type="email" placeholder="Votre email" data-lang="footer-newsletter-placeholder" style="flex: 1; padding: 12px; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; background: rgba(255, 255, 255, 0.1); color: #fff; font-size: 14px;">
+            <button data-lang="footer-newsletter-subscribe" style="padding: 12px 20px; background: linear-gradient(45deg, #ea6464, #0ea5e9); border: none; border-radius: 8px; color: white; font-weight: 600; cursor: pointer; transition: transform 0.2s ease;">S'abonner</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick links -->
+      <div class="footer-section">
+        <h4 style="color: #fff; margin-bottom: 20px; font-size: 20px; font-weight: 600; display: flex; align-items: center;" data-lang="footer-quicklinks-title">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-right: 10px;">
+            <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="#ea6464"/>
+          </svg>
+          Liens rapides
+        </h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+          <div>
+            <a href="#home" style="color: var(--muted); text-decoration: none; transition: all 0.3s ease; display: block; padding: 8px 0; border-radius: 6px; padding-left: 12px; position: relative;" data-lang="nav-home">Accueil</a>
+            <a href="#services" style="color: var(--muted); text-decoration: none; transition: all 0.3s ease; display: block; padding: 8px 0; border-radius: 6px; padding-left: 12px; position: relative;" data-lang="nav-services">Services</a>
+            <a href="#features" style="color: var(--muted); text-decoration: none; transition: all 0.3s ease; display: block; padding: 8px 0; border-radius: 6px; padding-left: 12px; position: relative;" data-lang="nav-features">Fonctionnalités</a>
+          </div>
+          <div>
+            <a href="mentorat.html" style="color: var(--muted); text-decoration: none; transition: all 0.3s ease; display: block; padding: 8px 0; border-radius: 6px; padding-left: 12px; position: relative;" data-lang="nav-mentorat">Mentorat</a>
+            <a href="#about" style="color: var(--muted); text-decoration: none; transition: all 0.3s ease; display: block; padding: 8px 0; border-radius: 6px; padding-left: 12px; position: relative;" data-lang="nav-about">À propos</a>
+            <a href="inscription.html" style="color: var(--muted); text-decoration: none; transition: all 0.3s ease; display: block; padding: 8px 0; border-radius: 6px; padding-left: 12px; position: relative;" data-lang="nav-inscription">Inscription</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact info -->
+      <div class="footer-section">
+        <h4 style="color: #fff; margin-bottom: 20px; font-size: 20px; font-weight: 600; display: flex; align-items: center;" data-lang="footer-contact-title">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-right: 10px;">
+            <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 18H4V8L12 13L20 8V18ZM12 11L4 6H20L12 11Z" fill="#0ea5e9"/>
+          </svg>
+          Contact
+        </h4>
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+          <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+            <div style="width: 8px; height: 8px; background: #ea6464; border-radius: 50%; margin-top: 6px; margin-right: 12px; flex-shrink: 0;"></div>
+            <div>
+              <p style="color: var(--muted); margin: 0; font-weight: 600;">Email</p>
+              <a href="mailto:contact@yoon.sn" style="color: var(--muted); text-decoration: none; transition: color 0.3s ease;">contact@yoon.sn</a>
+            </div>
+          </div>
+          <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+            <div style="width: 8px; height: 8px; background: #0ea5e9; border-radius: 50%; margin-top: 6px; margin-right: 12px; flex-shrink: 0;"></div>
+            <div>
+              <p style="color: var(--muted); margin: 0; font-weight: 600;">Téléphone</p>
+              <a href="tel:+221766902590" style="color: var(--muted); text-decoration: none; transition: color 0.3s ease;">+221 76 690 2590</a>
+            </div>
+          </div>
+          <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+            <div style="width: 8px; height: 8px; background: #10b981; border-radius: 50%; margin-top: 6px; margin-right: 12px; flex-shrink: 0;"></div>
+            <div>
+              <p style="color: var(--muted); margin: 0; font-weight: 600;">Adresse</p>
+              <p style="color: var(--muted); margin: 0;">Dakar, Sénégal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- Bottom section -->
+    <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+      <p style="color: var(--muted); margin: 0; font-size: 14px;" data-lang="footer-copyright">&copy; 2024 YOON - Legal-Tech Sénégal. Tous droits réservés.</p>
+      <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+        <a href="#" style="color: var(--muted); text-decoration: none; font-size: 14px; transition: color 0.3s ease;" data-lang="footer-privacy">Politique de confidentialité</a>
+        <a href="#" style="color: var(--muted); text-decoration: none; font-size: 14px; transition: color 0.3s ease;" data-lang="footer-terms">Conditions d'utilisation</a>
+        <a href="#" style="color: var(--muted); text-decoration: none; font-size: 14px; transition: color 0.3s ease;" data-lang="footer-legal">Mentions légales</a>
+      </div>
     </div>
   </div>
+</footer>
 
-  <!-- Scripts -->
-  <script src="script.js"></script>
+<style>
+/* Footer animations and hover effects */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.footer-section a:hover {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  transform: translateX(5px);
+}
+
+.footer-section a {
+  position: relative;
+}
+
+.footer-section a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(45deg, #ea6464, #0ea5e9);
+  transition: width 0.3s ease;
+}
+
+.footer-section a:hover::before {
+  width: 6px;
+}
+
+.footer-section .footer-section a:nth-child(odd):hover {
+  transform: translateX(8px);
+}
+
+.footer-section .footer-section a:nth-child(even):hover {
+  transform: translateX(12px);
+}
+
+/* Social media hover effects */
+.footer-section a[href*="wa.me"]:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.footer-section a[href*="facebook"]:hover {
+  transform: scale(1.1) rotate(-5deg);
+  box-shadow: 0 6px 20px rgba(24, 119, 242, 0.4);
+}
+
+.footer-section a[href*="instagram"]:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 20px rgba(228, 64, 95, 0.4);
+}
+
+/* Newsletter input focus */
+.footer-section input:focus {
+  outline: none;
+  border-color: #ea6464;
+  box-shadow: 0 0 0 2px rgba(234, 100, 100, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  footer {
+    padding: 40px 20px 20px;
+  }
+
+  .footer-section {
+    margin-bottom: 30px;
+  }
+
+  .footer-section .footer-section {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .footer-section a {
+    padding-left: 0;
+  }
+
+  .footer-section a::before {
+    display: none;
+  }
+}
+</style>
+
+<!-- N8N Chat Widget Fixed at Bottom Right -->
+<div id="n8n-chat" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;"></div>
+
+<!-- Floating social + WhatsApp -->
+<div class="floating">
+  <a href="https://wa.me/221766902590" target="_blank" title="WhatsApp"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23ffffff' d='M20.5 3.5A11.95 11.95 0 0012 0C5.373 0 0 5.373 0 12c0 2.116.553 4.093 1.6 5.86L0 24l6.38-1.64A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12 0-1.8-.38-3.5-1.5-5.0zM12 21.5c-1.7 0-3.35-.4-4.8-1.14l-.34-.18-3.79.98.98-3.7-.2-.35A9.48 9.48 0 012.5 12C2.5 6.2 6.93 2 12 2s9.5 4.2 9.5 10-4.43 9.5-9.5 9.5z'/></svg>" alt="wa"></a>
+  <a href="#" title="Facebook"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23ffffff' d='M22 12a10 10 0 10-11.5 9.95v-7.05h-2.3V12h2.3V9.8c0-2.3 1.37-3.58 3.47-3.58.99 0 2.04.18 2.04.18v2.24h-1.15c-1.13 0-1.48.7-1.48 1.42V12h2.52l-.4 2.9h-2.12v7.05A10.02 10.02 0 0022 12z'/></svg>" alt="fb"></a>
+  <a href="#" title="Instagram"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23ffffff' d='M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.5A4.5 4.5 0 1016.5 13 4.5 4.5 0 0012 8.5zM18.5 6a1 1 0 11-1-1 1 1 0 011 1z'/></svg>" alt="ig"></a>
+</div>
+
+
+<script src="script.js"></script>
+
+<!-- Payment Modal -->
+<div id="paymentModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:1000;justify-content:center;align-items:center;">
+  <div style="background:var(--card);padding:20px;border-radius:12px;max-width:400px;width:90%;color:#f5f5f5;">
+    <h3>Paiement pour Téléchargement</h3>
+    <p class="muted">Sélectionnez un moyen de paiement pour télécharger le contrat (simulation).</p>
+    <form id="paymentForm">
+      <div style="margin:10px 0;">
+        <label><input type="radio" name="payment" value="Orange Money" required> Orange Money</label><br>
+        <label><input type="radio" name="payment" value="Wave"> Wave</label><br>
+        <label><input type="radio" name="payment" value="Free Money"> Free Money</label><br>
+        <label><input type="radio" name="payment" value="Virement Bancaire"> Virement Bancaire</label>
+      </div>
+      <button type="submit" class="btn">Confirmer Paiement</button>
+      <button type="button" id="cancelPayment" class="btn" style="background:#666;margin-left:10px;">Annuler</button>
+    </form>
+  </div>
+</div>
+
 </body>
 </html>
