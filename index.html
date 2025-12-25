@@ -54,7 +54,6 @@
       <a href="#features" data-lang="nav-features">Fonctionnalités</a>
       <a href="mentorat.html" data-lang="nav-mentorat">Mentorat</a>
       <a href="#about" data-lang="nav-about">À propos</a>
-      <a href="inscription.html" data-lang="nav-inscription" class="cta">Inscription</a>
     </div>
 
     <!-- Language Selector -->
@@ -74,21 +73,20 @@
   <!-- HERO -->
   <section id="home" class="hero" style="background-image: url('image/AI%20in%20Legal.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
     <div class="hero-left container" style="position: relative; z-index: 1;">
-      <h1 class="reveal" data-lang="hero-title"><span class="letter">xaam ça yoon.</span><span class="muted">Votre assistant juridique et Fiscalité</span>.</h1>
+      <h1 class="reveal" data-lang="hero-title" style="margin-top: 15px;"><span class="letter">xaam ça yoon.</span><span class="muted">Votre assistant juridique et Fiscalité</span>.</h1>
       <p class="reveal" data-lang="hero-subtitle">Rendez le droit accessible : conseils rapides, génération de documents, simulateurs fiscaux et mise en relation avec des experts.</p>
       <div class="buttons reveal">
-        <a class="btn btn-primary" href="inscription.html" data-lang="hero-signup">S'inscrire</a>
         <a class="btn" href="https://wa.me/221766902590" target="_blank" data-lang="hero-quote">Demander un devis</a>
       </div>
 
-      <div class="services reveal" style="margin-top:22px">
-        <div class="service">
-          <h4 data-lang="hero-service1-title">Conseils instantanés</h4>
-          <p data-lang="hero-service1-desc">Réponses claires via le chatbot (IA) pour questions générales.</p>
+      <div class="services reveal" style="margin-top:40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+        <div class="service" style="background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 24px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); transition: all 0.3s ease; animation: fadeInUp 0.8s ease-out;">
+          <h4 data-lang="hero-service1-title" style="color: #fff; font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; background: linear-gradient(45deg, #ea6464, #0ea5e9); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Conseils instantanés</h4>
+          <p data-lang="hero-service1-desc" style="color: rgba(255,255,255,0.9); font-size: 1rem; line-height: 1.6; margin: 0;">Réponses claires via le chatbot (IA) pour questions générales.</p>
         </div>
-        <div class="service">
-          <h4 data-lang="hero-service2-title">Générateur de contrats</h4>
-          <p data-lang="hero-service2-desc">Modèles prêts à remplir (CDD, bail, contrat de prestation).</p>
+        <div class="service" style="background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 24px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); transition: all 0.3s ease; animation: fadeInUp 0.8s ease-out 0.2s both;">
+          <h4 data-lang="hero-service2-title" style="color: #fff; font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; background: linear-gradient(45deg, #10b981, #ea6464); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Générateur de contrats</h4>
+          <p data-lang="hero-service2-desc" style="color: rgba(255,255,255,0.9); font-size: 1rem; line-height: 1.6; margin: 0;">Modèles prêts à remplir (CDD, bail, contrat de prestation).</p>
         </div>
       </div>
     </div>
@@ -208,51 +206,42 @@
     </div>
   </section>
 
-  <!-- GALLERY -->
-  <section id="gallery">
-    <div class="container">
-      <h2 class="section-title reveal" data-lang="gallery-title">Photos de droit</h2>
-      <div class="gallery-grid reveal">
-        <div class="gallery-item">
-          <img src="image/droit.jpeg" alt="droit">
-          <div class="gallery-caption">
-            <h4 data-lang="gallery-item1-title">Le Droit au Sénégal</h4>
-            <p data-lang="gallery-item1-desc">Symbolisant le droit et la justice au Sénégal, ces institutions représentent les fondements de notre système juridique moderne.</p>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="image/justice.jpeg" alt="justice">
-          <div class="gallery-caption">
-            <h4 data-lang="gallery-item2-title">La Balance de la Justice</h4>
-            <p data-lang="gallery-item2-desc">La balance de la justice, garante de l'équité et de l'impartialité dans tous les domaines du droit sénégalais.</p>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="image/Le contrat.jpeg" alt="contrat">
-          <div class="gallery-caption">
-            <h4 data-lang="gallery-item3-title">Les Contrats Juridiques</h4>
-            <p data-lang="gallery-item3-desc">Un contrat signé représente la base des accords juridiques, essentiel pour la sécurité des transactions commerciales.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- ABOUT -->
+  <section id="about" class="decorative-section" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%); padding: 80px 0; position: relative; overflow: hidden;">
+    <!-- Decorative background elements -->
+    <div style="position: absolute; top: 10%; left: 5%; width: 100px; height: 100px; background: rgba(14, 165, 233, 0.1); border-radius: 50%; animation: float 8s ease-in-out infinite;"></div>
+    <div style="position: absolute; top: 60%; right: 10%; width: 80px; height: 80px; background: rgba(234, 100, 100, 0.1); clip-path: polygon(50% 0%, 0% 100%, 100% 100%); animation: float 10s ease-in-out infinite reverse;"></div>
+    <div style="position: absolute; bottom: 20%; left: 15%; width: 60px; height: 60px; background: rgba(16, 185, 129, 0.1); transform: rotate(45deg); animation: float 9s ease-in-out infinite;"></div>
 
- <!-- ABOUT -->
-  <section id="about" class="decorative-section">
-    <div class="container">
+    <div class="container" style="position: relative; z-index: 1;">
       <div class="decorative-header">
-        <h2 class="section-title reveal" data-lang="about-title">À propos</h2>
-        <div class="decorative-line"></div>
-        <p class="reveal" data-lang="about-subtitle">Découvrez l'histoire et la mission de YOON, votre partenaire juridique au Sénégal.</p>
+        <h2 class="section-title reveal" data-lang="about-title" style="color: #1e293b; font-size: 2.5rem; font-weight: 700; text-align: center; margin-bottom: 20px;">À propos</h2>
+        <div class="decorative-line" style="width: 100px; height: 4px; background: linear-gradient(45deg, #ea6464, #0ea5e9); margin: 0 auto 30px; border-radius: 2px;"></div>
+        <p class="reveal" data-lang="about-subtitle" style="text-align: center; color: #64748b; font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Découvrez l'histoire et la mission de YOON, votre partenaire juridique au Sénégal.</p>
       </div>
 
       <div class="about-content">
-        <div class="about-main reveal">
-          <div class="about-text">
-            <h3 data-lang="about-mission-title">Notre Mission</h3>
-            <p data-lang="about-mission-desc1">YOON signifie « loi » en wolof. Nous aidons les particuliers et professionnels au Sénégal à comprendre et appliquer la loi via des outils numériques simples et accessibles.</p>
-            <p data-lang="about-mission-desc2">Notre plateforme révolutionne l'accès au droit en combinant intelligence artificielle, génération automatique de documents et mise en relation avec des experts qualifiés.</p>
+        <div class="about-main reveal" style="background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border-radius: 20px; padding: 50px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.2); margin-bottom: 40px;">
+          <div class="about-text" style="text-align: center;">
+            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
+              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 20px;">
+                <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="url(#gradient1)"/>
+                <circle cx="12" cy="12" r="3" fill="url(#gradient2)"/>
+                <defs>
+                  <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ea6464;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#0ea5e9;stop-opacity:1" />
+                  </linearGradient>
+                  <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <h3 data-lang="about-mission-title" style="color: #1e293b; font-size: 2rem; font-weight: 700; margin: 0; background: linear-gradient(45deg, #ea6464, #0ea5e9); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Notre Mission</h3>
+            </div>
+            <p data-lang="about-mission-desc1" style="color: #475569; font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto;"><strong style="color: #ea6464;">YOON</strong> signifie « loi » en wolof. Nous aidons les particuliers et professionnels au Sénégal à comprendre et appliquer la loi via des outils numériques simples et accessibles.</p>
+            <p data-lang="about-mission-desc2" style="color: #475569; font-size: 1.1rem; line-height: 1.8; margin-bottom: 0; max-width: 800px; margin-left: auto; margin-right: auto;">Notre plateforme révolutionne l'accès au droit en combinant <span style="color: #0ea5e9; font-weight: 600;">intelligence artificielle</span>, <span style="color: #10b981; font-weight: 600;">génération automatique de documents</span> et <span style="color: #ea6464; font-weight: 600;">mise en relation avec des experts qualifiés</span>.</p>
           </div>
         </div>
 
@@ -301,7 +290,7 @@
       <div class="contact-grid reveal">
         <div class="contact-info">
           <h3 data-lang="contact-info-title">Informations de contact</h3>
-          <p><strong data-lang="contact-address-label">Adresse :</strong> <span data-lang="contact-address-value">Dakar, Sénégal</span></p>
+          <p><strong data-lang="contact-address-label">Adresse :</strong> <span data-lang="contact-address-value">dakar senegal</span></p>
           <p><strong data-lang="contact-phone-label">Téléphone :</strong> <a href="tel:+221766902590" data-lang="contact-phone-value">+221 76 690 2590</a></p>
           <p><strong data-lang="contact-email-label">Email :</strong> <a href="mailto:contact@yoon.sn" data-lang="contact-email-value">contact@yoon.sn</a></p>
           <div style="margin-top: 20px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
@@ -319,21 +308,13 @@
               <option value="cabinet-droit-commercial" data-lang="contact-form-cabinet-option3">Cabinet de Droit Commercial</option>
               <option value="cabinet-droit-fiscal" data-lang="contact-form-cabinet-option4">Cabinet de Droit Fiscal</option>
               <option value="cabinet-droit-travail" data-lang="contact-form-cabinet-option5">Cabinet de Droit du Travail</option>
+              <option value="cabinet-droit-famille" data-lang="contact-form-cabinet-option6">Cabinet de Droit de la Famille</option>
+              <option value="cabinet-notaire" data-lang="contact-form-cabinet-option7">Cabinet de Notaire</option>
+              <option value="cabinet-avocate" data-lang="contact-form-cabinet-option8">Cabinet d'Avocate</option>
+
             </select>
           </div>
-          <div class="form-group">
-            <label for="name" data-lang="contact-form-name-label">Nom</label>
-            <input type="text" id="name" name="name" placeholder="Votre nom" data-lang="contact-form-name-placeholder" required>
-          </div>
-          <div class="form-group">
-            <label for="email" data-lang="contact-form-email-label">Email</label>
-            <input type="email" id="email" name="email" placeholder="Votre email" data-lang="contact-form-email-placeholder" required>
-          </div>
-          <div class="form-group">
-            <label for="message" data-lang="contact-form-message-label">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Votre message" data-lang="contact-form-message-placeholder" required></textarea>
-          </div>
-          <button type="submit" class="btn" data-lang="contact-form-submit">Envoyer</button>
+          <button type="submit" class="btn" data-lang="contact-form-submit">cliquer</button>
         </form>
       </div>
     </div>
@@ -391,7 +372,6 @@
           <div>
             <a href="mentorat.html" style="color: var(--muted); text-decoration: none; transition: all 0.3s ease; display: block; padding: 8px 0; border-radius: 6px; padding-left: 12px; position: relative;" data-lang="nav-mentorat">Mentorat</a>
             <a href="#about" style="color: var(--muted); text-decoration: none; transition: all 0.3s ease; display: block; padding: 8px 0; border-radius: 6px; padding-left: 12px; position: relative;" data-lang="nav-about">À propos</a>
-            <a href="inscription.html" style="color: var(--muted); text-decoration: none; transition: all 0.3s ease; display: block; padding: 8px 0; border-radius: 6px; padding-left: 12px; position: relative;" data-lang="nav-inscription">Inscription</a>
           </div>
         </div>
       </div>
@@ -445,6 +425,24 @@
 </footer>
 
 <style>
+/* Hero services animations and hover effects */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.services .service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.08) 100%);
+}
+
 /* Footer animations and hover effects */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
@@ -531,6 +529,44 @@
   .footer-section a::before {
     display: none;
   }
+
+  /* Hero services responsiveness */
+  .services {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+
+  .services .service {
+    padding: 20px !important;
+  }
+
+  .services .service h4 {
+    font-size: 1.1rem !important;
+  }
+
+  .services .service p {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .services {
+    margin-top: 30px !important;
+  }
+
+  .services .service {
+    padding: 16px !important;
+    border-radius: 12px !important;
+  }
+
+  .services .service h4 {
+    font-size: 1rem !important;
+  }
+
+  .services .service p {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+  }
 }
 </style>
 
@@ -566,4 +602,4 @@
 </div>
 
 </body>
-</html>
+</html>c
