@@ -95,6 +95,7 @@ const translations = {
     "footer-terms": "Conditions d'utilisation",
     "footer-legal": "Mentions légales",
     "footer-copyright": "© 2024 YOON - Legal-Tech Sénégal. Tous droits réservés.",
+    "footer-description": "Votre assistant juridique au Sénégal. Rendez le droit accessible avec nos outils numériques innovants et notre expertise locale.",
 
     // Inscription page
     "inscription-title": "Inscription",
@@ -153,6 +154,8 @@ const translations = {
     "hero-service1-desc": "Réponses claires via le chatbot (IA) pour questions générales.",
     "hero-service2-title": "Générateur de contrats",
     "hero-service2-desc": "Modèles prêts à remplir (CDD, bail, contrat de prestation).",
+    "hero-service3-title": "Assistance fiscale",
+    "hero-service3-desc": "Simulateurs et check‑list pour la déclaration au Sénégal.",
     "hero-demo-title": "Démo Chat",
     "hero-demo-input-placeholder": "Ex: Ecrite votre nom et prenom ?",
     "hero-demo-ask": "Poser",
@@ -218,7 +221,12 @@ const translations = {
     "footer-privacy": "Politique de confidentialité",
     "footer-terms": "Conditions d'utilisation",
     "footer-legal": "Mentions légales",
-    "footer-copyright": "© 2024 YOON - Legal-Tech Sénégal. Tous droits réservés."
+"footer-copyright": "© 2024 YOON - Legal-Tech Sénégal. Tous droits réservés.",
+"footer-newsletter-title": "Restez informé",
+"footer-newsletter-placeholder": "Votre email",
+"footer-newsletter-subscribe": "S'abonner",
+"footer-quicklinks-title": "Liens rapides",
+"footer-contact-title": "Contact"
   },
 
   en: {
@@ -373,8 +381,10 @@ const translations = {
     "hero-service1-title": "Instant Advice",
     "hero-service1-desc": "Clear responses via AI chatbot for general questions.",
     "hero-service2-title": "Contract Generator",
-    "hero-service2-desc": "Ready-to-fill templates (CDD, lease, service contract).",
-    "hero-demo-title": "Chat Demo",
+"hero-service2-desc": "Ready-to-fill templates (CDD, lease, service contract).",
+"hero-service3-title": "Tax Assistance",
+"hero-service3-desc": "Simulators and checklists for declaration in Senegal.",
+"hero-demo-title": "Chat Demo",
     "hero-demo-input-placeholder": "Ex: Write your first and last name?",
     "hero-demo-ask": "Ask",
     "hero-demo-templates-title": "Quick Templates",
@@ -439,7 +449,12 @@ const translations = {
     "footer-privacy": "Privacy Policy",
     "footer-terms": "Terms of Use",
     "footer-legal": "Legal Notice",
-    "footer-copyright": "© 2024 YOON - Legal-Tech Senegal. All rights reserved."
+"footer-copyright": "© 2024 YOON - Legal-Tech Senegal. All rights reserved.",
+"footer-newsletter-title": "Stay Informed",
+"footer-newsletter-placeholder": "Your email",
+"footer-newsletter-subscribe": "Subscribe",
+"footer-quicklinks-title": "Quick Links",
+"footer-contact-title": "Contact"
   },
 
   wo: {
@@ -594,8 +609,10 @@ const translations = {
     "hero-service1-title": "Conseils bu gaaw",
     "hero-service1-desc": "Tontu bu leer ak chatbot IA ngir laaj yi bu yomb.",
     "hero-service2-title": "Générateur contrats",
-    "hero-service2-desc": "Modèles buñ laajal ngir tànn (CDD, bail, contrat prestation).",
-    "hero-demo-title": "Chat Demo",
+"hero-service2-desc": "Modèles buñ laajal ngir tànn (CDD, bail, contrat prestation).",
+"hero-service3-title": "Ndimbalu lëkkalekaayu",
+"hero-service3-desc": "Simulateurs ak check‑list ngir déclaration ci Sénégal.",
+"hero-demo-title": "Chat Demo",
     "hero-demo-input-placeholder": "Misal: Bind sa tur ak sa tudd?",
     "hero-demo-ask": "Laaj",
     "hero-demo-templates-title": "Modèles bu gaaw",
@@ -659,7 +676,12 @@ const translations = {
     "footer-privacy": "Politique confidentialité",
     "footer-terms": "Conditions utilisation",
     "footer-legal": "Mentions légales",
-    "footer-copyright": "© 2024 YOON - Legal-Tech Sénégal. Yëpp droit yi àtte."
+"footer-copyright": "© 2024 YOON - Legal-Tech Sénégal. Yëpp droit yi àtte.",
+"footer-newsletter-title": "Door a am xibaar",
+"footer-newsletter-placeholder": "Sa email",
+"footer-newsletter-subscribe": "Bindu",
+"footer-quicklinks-title": "Lien yi bu gaaw",
+"footer-contact-title": "Jokkoo"
   },
 
   ar: {
@@ -813,8 +835,10 @@ const translations = {
     "hero-service1-title": "نصائح فورية",
     "hero-service1-desc": "إجابات واضحة عبر روبوت الدردشة الذكي للأسئلة العامة.",
     "hero-service2-title": "مولد العقود",
-    "hero-service2-desc": "قوالب جاهزة للملء (CDD، إيجار، عقد خدمة).",
-    "hero-demo-title": "عرض الدردشة",
+"hero-service2-desc": "قوالب جاهزة للملء (CDD، إيجار، عقد خدمة).",
+"hero-service3-title": "المساعدة الضريبية",
+"hero-service3-desc": "محاكيات وقوائم تحقق للإعلان في السنغال.",
+"hero-demo-title": "عرض الدردشة",
     "hero-demo-input-placeholder": "مثال: اكتب اسمك الأول ولقبك؟",
     "hero-demo-ask": "اسأل",
     "hero-demo-templates-title": "قوالب سريعة",
@@ -927,6 +951,8 @@ const translations = {
       });
     });
 
+
+
     // quick ask
     const askQuickBtn = document.getElementById('ask-quick');
     const quickQ = document.getElementById('quick-q');
@@ -935,6 +961,96 @@ const translations = {
         const q = quickQ.value.trim(); if (!q) return alert('Écrivez une question');
         sendToServer(q);
       });
+    }
+
+    // voice input
+    const voiceBtn = document.getElementById('voice-btn');
+    if (voiceBtn && quickQ) {
+      voiceBtn.addEventListener('click', () => {
+        startVoiceRecognition();
+      });
+    }
+
+    function startVoiceRecognition() {
+      if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+        alert('Votre navigateur ne supporte pas la reconnaissance vocale. Essayez Chrome ou Edge.');
+        return;
+      }
+
+      const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+      recognition.lang = 'fr-FR'; // French language
+      recognition.interimResults = false;
+      recognition.maxAlternatives = 1;
+
+      recognition.onstart = () => {
+        voiceBtn.textContent = '🎙️';
+        voiceBtn.style.background = '#ea6464';
+        quickQ.placeholder = 'Parlez maintenant...';
+      };
+
+      recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+        quickQ.value = transcript;
+        // Automatically trigger the ask button
+        if (askQuickBtn) {
+          askQuickBtn.click();
+        }
+      };
+
+      recognition.onerror = (event) => {
+        console.error('Erreur de reconnaissance vocale:', event.error);
+        alert('Erreur lors de la reconnaissance vocale. Réessayez.');
+      };
+
+      recognition.onend = () => {
+        voiceBtn.textContent = '🎤';
+        voiceBtn.style.background = '';
+        quickQ.placeholder = 'Ex: Ecrite votre nom et prenom ?';
+      };
+
+      recognition.start();
+    }
+
+    // Function for voice recognition in n8n chat
+    function startVoiceRecognitionForChat(input, voiceBtn) {
+      if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+        alert('Votre navigateur ne supporte pas la reconnaissance vocale. Essayez Chrome ou Edge.');
+        return;
+      }
+
+      const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+      recognition.lang = 'fr-FR'; // French language
+      recognition.interimResults = false;
+      recognition.maxAlternatives = 1;
+
+      recognition.onstart = () => {
+        voiceBtn.textContent = '🎙️';
+        voiceBtn.style.background = '#ea6464';
+        input.placeholder = 'Parlez maintenant...';
+      };
+
+      recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+        input.value = transcript;
+        // Optionally trigger send if there's a send button
+        const sendBtn = input.parentNode.querySelector('button[type="submit"], button');
+        if (sendBtn) {
+          sendBtn.click();
+        }
+      };
+
+      recognition.onerror = (event) => {
+        console.error('Erreur de reconnaissance vocale:', event.error);
+        alert('Erreur lors de la reconnaissance vocale. Réessayez.');
+      };
+
+      recognition.onend = () => {
+        voiceBtn.textContent = '🎤';
+        voiceBtn.style.background = '';
+        input.placeholder = 'Tapez votre question...';
+      };
+
+      recognition.start();
     }
 
     // chat widget send (guarded: some pages may not include the chat DOM)
@@ -1007,6 +1123,104 @@ const translations = {
         alert('Veuillez sélectionner un cabinet.');
       }
     });
+
+    // Add voice button to n8n chat after it loads
+    const addVoiceButtonToN8nChat = () => {
+      const n8nChat = document.getElementById('n8n-chat');
+      if (!n8nChat) return;
+
+      // More robust selector for n8n chat input
+      const chatInput = n8nChat.querySelector('input[type="text"], textarea, input[placeholder*="Tapez"], input[placeholder*="question"], input[placeholder*="poser"], input[placeholder*="demande"]');
+      if (!chatInput) return;
+
+      // Check if voice button already exists
+      if (chatInput.parentNode.querySelector('.voice-btn-n8n')) return;
+
+      // Create voice button
+      const voiceBtn = document.createElement('button');
+      voiceBtn.className = 'voice-btn-n8n';
+      voiceBtn.textContent = '🎤';
+      voiceBtn.title = 'Utiliser la reconnaissance vocale';
+      voiceBtn.style.cssText = `
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #ea6464;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(234, 100, 100, 0.3);
+      `;
+
+      voiceBtn.addEventListener('mouseenter', () => {
+        voiceBtn.style.background = '#d43d3d';
+        voiceBtn.style.transform = 'translateY(-50%) scale(1.1)';
+      });
+
+      voiceBtn.addEventListener('mouseleave', () => {
+        voiceBtn.style.background = '#ea6464';
+        voiceBtn.style.transform = 'translateY(-50%) scale(1)';
+      });
+
+      voiceBtn.addEventListener('click', () => {
+        startVoiceRecognitionForChat(chatInput, voiceBtn);
+      });
+
+      // Make input container relative if not already
+      const inputContainer = chatInput.parentNode;
+      if (getComputedStyle(inputContainer).position === 'static') {
+        inputContainer.style.position = 'relative';
+      }
+
+      // Adjust input padding to make space for button
+      const currentPaddingRight = parseInt(getComputedStyle(chatInput).paddingRight) || 0;
+      chatInput.style.paddingRight = (currentPaddingRight + 50) + 'px';
+
+      // Style the input field if not already styled
+      if (!chatInput.style.border) {
+        chatInput.style.border = '2px solid #ea6464';
+        chatInput.style.borderRadius = '25px';
+        chatInput.style.fontSize = '16px';
+        chatInput.style.outline = 'none';
+        chatInput.style.backgroundColor = '#fff';
+        chatInput.style.color = '#333';
+        chatInput.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+        chatInput.style.transition = 'border-color 0.3s ease, box-shadow 0.3s ease';
+
+        // Add focus styles
+        chatInput.addEventListener('focus', () => {
+          chatInput.style.borderColor = '#0ea5e9';
+          chatInput.style.boxShadow = '0 0 0 3px rgba(14, 165, 233, 0.2)';
+        });
+
+        chatInput.addEventListener('blur', () => {
+          chatInput.style.borderColor = '#ea6464';
+          chatInput.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+        });
+      }
+
+      // Append button to input container
+      inputContainer.appendChild(voiceBtn);
+    };
+
+    // Try to add voice button immediately and then periodically check
+    addVoiceButtonToN8nChat();
+    const voiceButtonInterval = setInterval(addVoiceButtonToN8nChat, 1000);
+
+    // Stop checking after 10 seconds
+    setTimeout(() => {
+      clearInterval(voiceButtonInterval);
+    }, 10000);
   });
 
   // Function to update language
@@ -1077,81 +1291,16 @@ const translations = {
 
   document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contactForm');
-    const status = document.getElementById('contactStatus');
-    const flash = document.getElementById('flashMessage');
 
     if (!form) return;
 
-    form.addEventListener('submit', async function (e) {
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
-      if (status) status.textContent = '';
-
-      const data = {
-        name: (form.querySelector('[name="name"]') || {}).value?.trim() || '',
-        email: (form.querySelector('[name="email"]') || {}).value?.trim() || '',
-        phone: (form.querySelector('[name="phone"]') || {}).value?.trim() || '',
-        message: (form.querySelector('[name="message"]') || {}).value?.trim() || ''
-      };
-
-      // validations simples
-      const errors = [];
-      if (!data.name) errors.push('Nom requis.');
-      if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) errors.push('Email invalide.');
-      if (!data.phone) errors.push('Téléphone requis.');
-      if (!data.message) errors.push('Message requis.');
-
-      if (errors.length) {
-        if (status) { status.style.color = 'var(--accent)'; status.textContent = errors.join(' '); }
-        return;
-      }
-
-      const btn = form.querySelector('button[type="submit"]');
-      if (btn) { btn.disabled = true; btn.textContent = 'Envoi...'; }
-
-      try {
-        const resp = await fetch(form.action || 'contact.php', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify(data)
-        });
-
-        const json = await resp.json();
-
-        if (resp.ok && json.ok) {
-          // affiche message succès en haut et scroll vers le haut
-          if (flash) {
-            flash.className = 'flash success';
-            flash.textContent = 'Envoi réussi. Merci !';
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            setTimeout(() => { if (flash) { flash.className = ''; flash.textContent = ''; } }, 5000);
-          }
-          form.reset();
-        } else {
-          const msg = (json.errors ? json.errors.join(' ') : (json.error || 'Erreur serveur'));
-          if (flash) {
-            flash.className = 'flash error';
-            flash.textContent = msg;
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            setTimeout(() => { if (flash) { flash.className = ''; flash.textContent = ''; } }, 5000);
-          } else if (status) {
-            status.style.color = '#ff6b6b';
-            status.textContent = msg;
-          }
-        }
-      } catch (err) {
-        if (flash) {
-          flash.className = 'flash error';
-          flash.textContent = 'Erreur réseau, réessayez.';
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-          setTimeout(() => { if (flash) { flash.className = ''; flash.textContent = ''; } }, 5000);
-        }
-        console.error(err);
-      } finally {
-        try {
-          if (btn) { btn.disabled = false; btn.textContent = 'Envoyer la demande'; }
-        } catch (cleanupErr) {
-          console.error('Cleanup error in finally (form submit):', cleanupErr);
-        }
+      const cabinet = document.getElementById('cabinet').value;
+      if (cabinet) {
+        window.location.href = cabinet + '.html';
+      } else {
+        alert('Veuillez sélectionner un cabinet.');
       }
     });
   });
