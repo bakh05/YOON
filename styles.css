@@ -2079,6 +2079,8 @@ footer .foot-inner {
 }
 
 .chat-input {
+  display: flex;
+  align-items: flex-end;
   padding: 20px;
   background: linear-gradient(135deg,
     rgba(255, 255, 255, 0.12),
