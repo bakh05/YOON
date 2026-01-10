@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabinet d'Avocats</title>
+    <meta name="description" content="Cabinet d'avocats spécialisé en droit civil, commercial et familial au Sénégal. Expertise juridique, conseils personnalisés et accompagnement professionnel.">
+    <meta name="keywords" content="avocat, cabinet juridique, droit civil, droit commercial, droit familial, Sénégal, conseil juridique">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        :root {
+            --primary-color: #0ea5e9; /* Blue */
+            --secondary-color: #ea6464; /* Red */
+            --accent-color: #10b981; /* Green */
+            --light-color: #f8fafc;
+            --dark-color: #08132d;
+            --muted: #fff;
+        }
+
+        .bg-primary { background-color: var(--primary-color) !important; }
+        .text-primary { color: var(--primary-color) !important; }
+        .bg-secondary { background-color: var(--secondary-color) !important; }
+        .text-secondary { color: var(--secondary-color) !important; }
+        .bg-gold { background-color: var(--secondary-color) !important; }
+        .text-gold { color: var(--secondary-color) !important; }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #000000;
+            border-color: #000000;
+        }
+
+        .btn-outline-primary {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: #000;
+        }
+
+        .btn-secondary:hover {
+            background-color: #b8941f;
+            border-color: #b8941f;
+            color: #000;
+        }
+
+        .btn-outline-secondary {
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .btn-outline-secondary:hover {
+            background-color: var(--secondary-color);
+            color: #000;
+        }
+
+        .btn-outline-gold {
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .btn-outline-gold:hover {
+            background-color: var(--secondary-color);
+            color: #000;
+        }
+
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        .center-title .section-title:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .card {
+            transition: transform 0.3s ease;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(6, 6, 6, 0.15);
+        }
+
+        .partner-logo {
+            max-height: 100px;
+            width: auto;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .partner-logo:hover {
+            filter: grayscale(0%);
+        }
+
+        .partner-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .partner-description {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card {
+            border-top: 3px solid var(--secondary-color);
+        }
+
+        .stats-number {
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 2.5rem;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <div class="container">
+        <button class="navbar-toggler border-gold" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Bouton consultation version mobile -->
+        <a href="contact.php" class="btn btn-outline-gold btn-sm d-lg-none ms-auto me-3">
+            <i class="fas fa-calendar me-1"></i>Consultation
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="index.php">
+                        Accueil
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#services">
+                        Services
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#features">
+                        Fonctionnalités
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="mentorat.html">
+                        Mentorat
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#about">
+                        À propos
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Bouton consultation version desktop -->
+            <div class="d-none d-lg-block">
+                <a href="contact.php" class="btn btn-outline-gold btn-sm">
+                    <i class="fas fa-calendar me-2"></i>Réserver une consultation
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<style>
+.navbar {
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+    color: var(--secondary-color) !important;
+}
+
+.nav-link.active {
+    background-color: rgba(212, 175, 55, 0.15);
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background: var(--secondary-color);
+    border-radius: 1px;
+}
+
+.border-gold {
+    border-color: var(--secondary-color) !important;
+}
+
+.btn-outline-gold {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.btn-outline-gold:hover {
+    background-color: var(--secondary-color);
+    color: #000;
+    border-color: var(--secondary-color);
+}
+</style>
+
+<!-- Hero Section -->
+<section class="hero-section text-white py-5" style="background: linear-gradient(135deg, #08132d 0%, #071227 50%, #0a1a3a 100%);">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-4">Nos partenariat Cabinet d'Avocats</h1>
+                <p class="lead mb-4">Cabinet d'avocats spécialisé en droit civil, commercial et familial au Sénégal. Expertise juridique, conseils personnalisés et accompagnement professionnel.</p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="#avocats" class="btn btn-gold btn-lg" style="background-color: var(--secondary-color); color: #000;">
+                        <i class="fas fa-gavel me-2"></i>Nos Avocats
+                    </a>
+                    <a href="#contact" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-calendar me-2"></i>Prendre rendez-vous
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <img src="image/logoYoon.png" alt="Partenaires YOON" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Statistiques -->
+<section class="py-5 bg-dark text-white">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-3 mb-4">
+                <div class="stat-item">
+                    <div class="stats-number">100+</div>
+                    <p class="fs-5 mb-0">Affaires traitées</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="stat-item">
+                    <div class="stats-number">15+</div>
+                    <p class="fs-5 mb-0">Années d'expérience</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="stat-item">
+                    <div class="stats-number">98%</div>
+                    <p class="fs-5 mb-0">Taux de succès</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="stat-item">
+                    <div class="stats-number">50+</div>
+                    <p class="fs-5 mb-0">Clients satisfaits</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Pourquoi choisir NECOM -->
+<section class="py-5 bg-accent">
+    <div class="container">
+        <div class="row text-center mb-5 center-title">
+            <div class="col">
+                <h2 class="section-title">Pourquoi choisir notre cabinet ?</h2>
+                <p class="section-subtitle">Notre expertise reconnue en droit civil, commercial et familial</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm text-center">
+                    <div class="card-body">
+                        <div class="benefit-icon">
+                            <i class="fas fa-gavel"></i>
+                        </div>
+                        <h5 class="card-title">Expertise Juridique</h5>
+                        <p class="card-text">Maîtrise approfondie du droit civil, commercial et familial avec plus de 15 ans d'expérience.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm text-center">
+                    <div class="card-body">
+                        <div class="benefit-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h5 class="card-title">Accompagnement Personnalisé</h5>
+                        <p class="card-text">Conseils juridiques adaptés à votre situation personnelle et professionnelle.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm text-center">
+                    <div class="card-body">
+                        <div class="benefit-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h5 class="card-title">Taux de Succès Élevé</h5>
+                        <p class="card-text">98% de succès dans nos affaires grâce à notre stratégie juridique éprouvée.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Partenaires -->
+<section id="partenaires" class="py-5 bg-light">
+    <div class="container">
+        <div class="row mb-5 center-title">
+            <div class="col">
+                <h2 class="section-title">Ils nous font confiance</h2>
+                <p class="section-subtitle">Entreprises et particuliers accompagnés dans leurs démarches juridiques</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Client 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card partner-card h-100">
+                    <div class="card-body">
+                        <img src="image/logoYoon.png" alt="TotalEnergies Sénégal" class="partner-logo mx-auto d-block mb-3" onerror="this.style.display='none'">
+                        <h5 class="card-title text-gold">JURIEnergies Sénégal</h5>
+                        <p class="partner-description">Accompagnement juridique en droit commercial et contrats d'entreprise depuis 2023.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Client 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card partner-card h-100">
+                    <div class="card-body">
+                        <img src="image/Digital.jpg" alt="Cabinet Deloitte Sénégal" class="partner-logo mx-auto d-block mb-3" onerror="this.style.display='none'">
+                        <h5 class="card-title text-gold">Cabinet Deloitte Sénégal</h5>
+                        <p class="partner-description">Conseil en droit des sociétés et restructuration d'entreprise.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Client 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card partner-card h-100">
+                    <div class="card-body">
+                        <img src="image/poli.jpg" alt="Ministère de l'Éducation" class="partner-logo mx-auto d-block mb-3" onerror="this.style.display='none'">
+                        <h5 class="card-title text-gold">Ministère de l'Éducation</h5>
+                        <p class="partner-description">Représentation en contentieux administratif et droit public.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Client 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card partner-card h-100">
+                    <div class="card-body">
+                        <img src="image/Le contrat.jpeg" alt="Groupe BICIS" class="partner-logo mx-auto d-block mb-3" onerror="this.style.display='none'">
+                        <h5 class="card-title text-gold">JURISTE BICIS</h5>
+                        <p class="partner-description">Accompagnement en droit bancaire et contrats financiers depuis 2022.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Client 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card partner-card h-100">
+                    <div class="card-body">
+                        <img src="image/Invoice data.jpg" alt="Orange Sénégal" class="partner-logo mx-auto d-block mb-3" onerror="this.style.display='none'">
+                        <h5 class="card-title text-gold">OMEGA CONSULTING Sénégal</h5>
+                        <p class="partner-description">Conseil en droit des télécommunications et protection des données.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Client 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="card partner-card h-100">
+                    <div class="card-body">
+                        <img src="image/In HR, your reputation isn't built on what you….jpg" alt="Université Cheikh Anta Diop" class="partner-logo mx-auto d-block mb-3" onerror="this.style.display='none'">
+                        <h5 class="card-title text-gold">Université Cheikh Anta Diop</h5>
+                        <p class="partner-description">Accompagnement en droit de la propriété intellectuelle et contrats académiques.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <p class="text-muted">Et de nombreux particuliers et entreprises nous font confiance...</p>
+        </div>
+    </div>
+</section>
+
+<!-- Section Carte Google Maps -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row text-center mb-5 center-title">
+            <div class="col">
+                <h2 class="section-title">Notre Localisation</h2>
+                <p class="section-subtitle">Trouvez-nous facilement au Sénégal</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103264.0!2d-14.4524!3d14.4974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTQuNDk3NCwtMTQuNDUyNA!5e0!3m2!1sfr!2ssn!4v1234567890!5m2!1sfr!2ssn" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Témoignages -->
+<section class="py-5 bg-accent">
+    <div class="container">
+        <div class="row mb-5 center-title">
+            <div class="col">
+                <h2 class="section-title">Témoignages de nos clients</h2>
+                <p class="section-subtitle">Ce qu'ils disent de notre accompagnement juridique</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm testimonial-card">
+                    <div class="card-body">
+                        <div class="text-gold mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="card-text fst-italic">"L'accompagnement juridique de Maître BAH a transformé nos processus contractuels. Notre équipe juridique est désormais plus confiante dans la gestion des accords commerciaux."</p>
+                        <div class="d-flex align-items-center mt-3">
+                            <div class="flex-shrink-0">
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center text-white" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h6 class="mb-0">Direction Juridique - Energies Sénégal</h6>
+                                <small class="text-muted">Client depuis 2023</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm testimonial-card">
+                    <div class="card-body">
+                        <div class="text-gold mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="card-text fst-italic">"L'approche unique de Maître BAH alliant expertise juridique et conseils personnalisés a permis à notre entreprise de réussir sa restructuration et d'optimiser son cadre juridique."</p>
+                        <div class="d-flex align-items-center mt-3">
+                            <div class="flex-shrink-0">
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center text-white" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h6 class="mb-0">Direction Juridique - Cabinet Deloitte Sénégal</h6>
+                                <small class="text-muted">Client depuis 2022</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Devenir Client -->
+<section id="devenir-client" class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h2 class="text-dark mb-4">Devenir Client YOON</h2>
+                <p class="lead mb-4">Vous avez besoin d'un accompagnement juridique expert en droit civil, commercial ou familial ?</p>
+                <ul class="list-unstyled mb-4">
+                    <li class="mb-2"><i class="fas fa-check text-gold me-2"></i>Conseils juridiques personnalisés adaptés à votre situation</li>
+                    <li class="mb-2"><i class="fas fa-check text-gold me-2"></i>Suivi personnalisé et accompagnement tout au long de votre dossier</li>
+                    <li class="mb-2"><i class="fas fa-check text-gold me-2"></i>Expertise reconnue avec plus de 15 ans d'expérience</li>
+                    <li class="mb-2"><i class="fas fa-check text-gold me-2"></i>Tarifs transparents et honoraires compétitifs</li>
+                </ul>
+                <div class="contact-info-box p-4 mb-4">
+                    <h4 class="text-white mb-3">Contactez-nous pour une consultation gratuite</h4>
+                    <p class="text-light mb-2"><i class="fas fa-phone text-gold me-2"></i> +221 76 6902690</p>
+                    <p class="text-secondary mb-0"><i class="fas fa-envelope text-gold me-2"></i> contactYOON .com</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card border-0 shadow">
+                    <div class="card-body text-center p-4">
+                        <div class="director-photo mb-4">
+                            <img src="image/Le contrat.jpeg" alt="Maître BAH Thierno Hamidou"
+                                 class="img-fluid rounded-circle shadow"
+                                 style="width: 150px; height: 150px; object-fit: cover; border: 3px solid var(--secondary-color);">
+                        </div>
+                        <h4 class="text-dark mb-2">MAÎTRE SALL</h4>
+                        <h5 class="text-gold mb-3">MAITRE SARR</h5>
+                        <p class="text-muted mb-3">Avocat spécialisé en droit civil, commercial et familial</p>
+                        <a href="contact.php" class="btn btn-secondary btn-lg w-100">
+                            <i class="fas fa-handshake me-2"></i>Prendre rendez-vous
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- CTA Section -->
+<section class="py-5 bg-dark text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h3 class="mb-3">Investissez dans le développement de vos équipes</h3>
+                <p class="mb-0">La communication authentique est la clé du succès de votre entreprise. Contactez-nous pour découvrir nos programmes de formation.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                <a href="contact.php" class="btn btn-secondary btn-lg">
+                    <i class="fas fa-calendar me-2"></i>Contactez-nous
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer style="background: linear-gradient(135deg, #08132d 0%, #071227 50%, #0a1a3a 100%); padding: 60px 20px 30px; position: relative; overflow: hidden;">
+  <!-- Animated background elements -->
+  <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 80%, rgba(234, 100, 100, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.1) 0%, transparent 50%), radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 70%); pointer-events: none;"></div>
+
+  <!-- Floating geometric shapes -->
+  <div style="position: absolute; top: 20%; left: 10%; width: 60px; height: 60px; background: rgba(234, 100, 100, 0.1); border-radius: 50%; animation: float 6s ease-in-out infinite;"></div>
+  <div style="position: absolute; top: 60%; right: 15%; width: 40px; height: 40px; background: rgba(14, 165, 233, 0.1); clip-path: polygon(50% 0%, 0% 100%, 100% 100%); animation: float 8s ease-in-out infinite reverse;"></div>
+  <div style="position: absolute; bottom: 20%; left: 20%; width: 30px; height: 30px; background: rgba(255, 255, 255, 0.1); transform: rotate(45deg); animation: float 7s ease-in-out infinite;"></div>
+
+  <div class="container" style="position: relative; z-index: 1; max-width: 1200px; margin: 0 auto;">
+    <!-- Main footer content -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-bottom: 40px;">
+      <!-- Company info -->
+      <div class="footer-section">
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+          <img src="image/logoYoon.png" alt="yoon" style="width: 50px; height: 50px; border-radius: 12px; margin-right: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+          <div>
+            <h3 style="color: #fff; margin: 0; font-size: 28px; font-weight: 700; background: linear-gradient(45deg, #fff, #e4e4e4); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></h3>
+            <p style="color: var(--muted); margin: 0; font-size: 14px;">Legal‑Tech Sénégal</p>
+          </div>
+        </div>  
+        <p style="color: var(--muted); line-height: 1.7; margin: 0 0 20px 0;">Cabinet d'Avocats YOON. Expertise juridique en droit civil, commercial et familial au Sénégal.</p>
+
+        <!-- Newsletter signup -->
+        <div style="background: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
+          <h4 style="color: #fff; margin: 0 0 15px 0; font-size: 16px;">Restez informé</h4>
+          <div style="display: flex; gap: 10px;">
+            <input type="email" placeholder="Votre email" style="flex: 1; padding: 12px; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; background: rgba(255, 255, 255, 0.1); color: #fff; font-size: 14px;">
+            <button style="padding: 12px 20px; background: linear-gradient(45deg, #ea6464, #0ea5e9); border: none; border-radius: 8px; color: white; font-weight: 600; cursor: pointer; transition: transform 0.2s ease;">S'abonner</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick links -->
+      <div class="footer-section">
+        <h4 style="color: #fff; margin-bottom: 20px; font-size: 20px; font-weight: 600; display: flex; align-items: center;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-right: 10px;">
+            <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="#ea6464"/>
+          </svg>
+          Liens rapides
+        </h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+          <div>
+            <a href="index.php" style="color: var(--muted); text-decoration: none; transition: all 0.3s ease; display: block; padding: 8px 0; border-radius: 6px; padding-left: 12px; position: relative;">Accueil</a>
+            <a href="formations.php" style="color: var(--muted); text-decoration: none; transition: all 0.3s ease; display: block; padding: 8px 0; border-radius: 6px; padding-left: 12px; position: relative;">Formations</a>
+            <a href="partenariats.php" style="color: var(--muted); text-decoration: none; transition: all 0.3s ease; display: block; padding: 8px 0; border-radius: 6px; padding-left: 12px; position: relative;">Partenaires</a>
+          </div>
+          <div>
+            <a href="about.php" style="color: var(--muted); text-decoration: none; transition: all 0.3s ease; display: block; padding: 8px 0; border-radius: 6px; padding-left: 12px; position: relative;">À propos</a>
+            <a href="contact.php" style="color: var(--muted); text-decoration: none; transition: all 0.3s ease; display: block; padding: 8px 0; border-radius: 6px; padding-left: 12px; position: relative;">Contact</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact info -->
+      <div class="footer-section">
+        <h4 style="color: #fff; margin-bottom: 20px; font-size: 20px; font-weight: 600; display: flex; align-items: center;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-right: 10px;">
+            <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 18H4V8L12 13L20 8V18ZM12 11L4 6H20L12 11Z" fill="#0ea5e9"/>
+          </svg>
+          Contact
+        </h4>
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+          <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+            <div style="width: 8px; height: 8px; background: #ea6464; border-radius: 50%; margin-top: 6px; margin-right: 12px; flex-shrink: 0;"></div>
+            <div>
+              <p style="color: var(--muted); margin: 0; font-weight: 600;">Email</p>
+              <a href="mailto:contact@necompro.com" style="color: var(--muted); text-decoration: none; transition: color 0.3s ease;">contact@yoon.com</a>
+            </div>
+          </div>
+          <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+            <div style="width: 8px; height: 8px; background: #0ea5e9; border-radius: 50%; margin-top: 6px; margin-right: 12px; flex-shrink: 0;"></div>
+            <div>
+              <p style="color: var(--muted); margin: 0; font-weight: 600;">Téléphone</p>
+              <a href="tel:777447173" style="color: var(--muted); text-decoration: none; transition: color 0.3s ease;">76 690 26 90</a>
+            </div>
+          </div>
+          <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+            <div style="width: 8px; height: 8px; background: #10b981; border-radius: 50%; margin-top: 6px; margin-right: 12px; flex-shrink: 0;"></div>
+            <div>
+              <p style="color: var(--muted); margin: 0; font-weight: 600;">Adresse</p>
+              <p style="color: var(--muted); margin: 0;">Sénégal, Dakar,patte d'oie</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom section -->
+    <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+      <p style="color: var(--muted); margin: 0; font-size: 14px;">&copy; 2026 YOON. Tous droits réservés.</p>
+      <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+        <a href="#" style="color: var(--muted); text-decoration: none; font-size: 14px; transition: color 0.3s ease;">Politique de confidentialité</a>
+        <a href="#" style="color: var(--muted); text-decoration: none; font-size: 14px; transition: color 0.3s ease;">Conditions d'utilisation</a>
+        <a href="#" style="color: var(--muted); text-decoration: none; font-size: 14px; transition: color 0.3s ease;">Mentions légales</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+/* Footer animations and hover effects */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.footer-section a:hover {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  transform: translateX(5px);
+}
+
+.footer-section a {
+  position: relative;
+}
+
+.footer-section a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(45deg, #ea6464, #0ea5e9);
+  transition: width 0.3s ease;
+}
+
+.footer-section a:hover::before {
+  width: 6px;
+}
+
+.footer-section .footer-section a:nth-child(odd):hover {
+  transform: translateX(8px);
+}
+
+.footer-section .footer-section a:nth-child(even):hover {
+  transform: translateX(12px);
+}
+
+/* Newsletter input focus */
+.footer-section input:focus {
+  outline: none;
+  border-color: #ea6464;
+  box-shadow: 0 0 0 2px rgba(234, 100, 100, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  footer {
+    padding: 40px 20px 20px;
+  }
+
+  .footer-section {
+    margin-bottom: 30px;
+  }
+
+  .footer-section .footer-section {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .footer-section a {
+    padding-left: 0;
+  }
+
+  .footer-section a::before {
+    display: none;
+  }
+}
+
+/* Floating social styles */
+.floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.floating a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #ea6464, #0ea5e9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.floating a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.floating img {
+  width: 24px;
+  height: 24px;
+}
+</style>
+
+<!-- Floating social + WhatsApp -->
+<div class="floating">
+  <a href="https://wa.me/221766902590" target="_blank" title="WhatsApp"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23ffffff' d='M20.5 3.5A11.95 11.95 0 0012 0C5.373 0 0 5.373 0 12c0 2.116.553 4.093 1.6 5.86L0 24l6.38-1.64A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12 0-1.8-.38-3.5-1.5-5.0zM12 21.5c-1.7 0-3.35-.4-4.8-1.14l-.34-.18-3.79.98.98-3.7-.2-.35A9.48 9.48 0 012.5 12C2.5 6.2 6.93 2 12 2s9.5 4.2 9.5 10-4.43 9.5-9.5 9.5z'/></svg>" alt="wa"></a>
+  <a href="https://www.facebook.com/septembre1988" title="Facebook"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23ffffff' d='M22 12a10 10 0 10-11.5 9.95v-7.05h-2.3V12h2.3V9.8c0-2.3 1.37-3.58 3.47-3.58.99 0 2.04.18 2.04.18v2.24h-1.15c-1.13 0-1.48.7-1.48 1.42V12h2.52l-.4 2.9h-2.12v7.05A10.02 10.02 0 0022 12z'/></svg>" alt="fb"></a>
+  <a href="https://www.instagram.com/cabinet_necom/" title="Instagram"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23ffffff' d='M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.5A4.5 4.5 0 1016.5 13 4.5 4.5 0 0012 8.5zM18.5 6a1 1 0 11-1-1 1 1 0 011 1z'/></svg>" alt="ig"></a>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script pour le menu mobile -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+
+    navLinks.forEach(function(navLink) {
+        navLink.addEventListener('click', function() {
+            if (window.innerWidth < 992) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                bsCollapse.hide();
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>
+
+
+

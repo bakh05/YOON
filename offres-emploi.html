@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Offres d'Emploi — YOON Legal-Tech Sénégal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <nav class="nav container">
+    <div class="brand">
+      <img src="logoyoon" alt="yoon" class="logo">
+      <div class="muted">Legal‑Tech Sénégal</div>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="#services">Services</a>
+      <a href="#features">Fonctionnalités</a>
+      <a href="mentorat.html">Mentorat</a>
+      <a href="#about">À propos</a>
+    </div>
+    <div class="lang-selector">
+      <select id="langSelect">
+        <option value="fr">Fr</option>
+        <option value="en">En</option>
+        <option value="wo">Wol</option>
+        <option value="ar">Ar</option>
+      </select>
+    </div>
+    <button class="menu-toggle" aria-label="menu">☰</button>
+  </nav>
+</header>
+
+<main>
+  <!-- HÉROS -->
+  <section id="hero" class="hero" style="background-image: url('image/AI%20in%20Legal.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+    <div class="hero-left container" style="position: relative; z-index: 1;">
+      <h1 class="reveal">Rejoignez l'équipe YOON</h1>
+      <p class="reveal">Contribuez à révolutionner l'accès au droit au Sénégal. Nous recherchons des talents passionnés par l'innovation juridique et la technologie.</p>
+      <div class="buttons reveal">
+        <a class="btn" href="#offres">Voir les offres</a>
+        <a class="btn btn-secondary" href="#pourquoi-nous">Pourquoi nous rejoindre</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFRES D'EMPLOI -->
+  <section id="offres">
+    <div class="container">
+      <h2 class="section-title reveal">Offres d'emploi disponibles</h2>
+      <div class="grid reveal">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1H5C3.89 1 3 1.89 3 3V21C3 22.11 3.89 23 5 23H19C20.11 23 21 22.11 21 21V9M19 9H14V4H19V9Z" fill="var(--accent)"/>
+            </svg>
+          </div>
+          <h3>Avocat Junior</h3>
+          <p class="muted">Spécialisé en droit civil et commercial. 2-3 ans d'expérience requise.</p>
+          <ul style="text-align: left; margin-top: 10px;">
+            <li>Conseils juridiques quotidiens</li>
+            <li>Rédaction de contrats</li>
+            <li>Représentation en justice</li>
+          </ul>
+          <a href="#candidature" class="btn" style="margin-top: 15px;">Postuler</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 2H17C18.11 2 19 2.9 19 4V20C19 21.11 18.11 22 17 22H7C5.9 22 5 21.11 5 20V4C5 2.9 5.9 2 7 2M7 4V8H17V4H7M7 10V12H9V10H7M11 10V12H13V10H11M15 10V12H17V10H15M7 14V16H9V14H7M11 14V16H13V14H11M15 14V16H17V14H15M7 18V20H9V18H7M11 18V20H13V18H11M15 18V20H17V18H15Z" fill="var(--accent)"/>
+            </svg>
+          </div>
+          <h3>Développeur Full-Stack</h3>
+          <p class="muted">Développement d'applications web pour la plateforme YOON.</p>
+          <ul style="text-align: left; margin-top: 10px;">
+            <li>Technologies : React, Node.js, Python</li>
+            <li>Intégration d'IA et chatbots</li>
+            <li>Optimisation des performances</li>
+          </ul>
+          <a href="#candidature" class="btn" style="margin-top: 15px;">Postuler</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 4C16.55 4 17 4.45 17 5S16.55 6 16 6 15 5.55 15 5 15.45 4 16 4M16 6.5C17.38 6.5 18.5 7.62 18.5 9S17.38 11.5 16 11.5 13.5 10.38 13.5 9 14.62 6.5 16 6.5M16 13C19.32 13 22 15.68 22 19V21H10V19C10 15.68 12.68 13 16 13Z" fill="var(--accent)"/>
+              <path d="M8 4C8.55 4 9 4.45 9 5S8.55 6 8 6 7 5.55 7 5 7.45 4 8 4M8 6.5C9.38 6.5 10.5 7.62 10.5 9S9.38 11.5 8 11.5 5.5 10.38 5.5 9 6.62 6.5 8 6.5M8 13C11.32 13 14 15.68 14 19V21H2V19C2 15.68 4.68 13 8 13Z" fill="var(--accent)" opacity="0.6"/>
+            </svg>
+          </div>
+          <h3>Consultant Juridique</h3>
+          <p class="muted">Accompagnement des clients dans leurs démarches juridiques.</p>
+          <ul style="text-align: left; margin-top: 10px;">
+            <li>Analyse de situations juridiques</li>
+            <li>Rédaction d'actes juridiques</li>
+            <li>Conseils personnalisés</li>
+          </ul>
+          <a href="#candidature" class="btn" style="margin-top: 15px;">Postuler</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1M10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z" fill="var(--accent)"/>
+            </svg>
+          </div>
+          <h3>Spécialiste Marketing Digital</h3>
+          <p class="muted">Promotion de la plateforme YOON et acquisition de clients.</p>
+          <ul style="text-align: left; margin-top: 10px;">
+            <li>Stratégies de contenu</li>
+            <li>Campagnes publicitaires</li>
+            <li>Analyse des performances</li>
+          </ul>
+          <a href="#candidature" class="btn" style="margin-top: 15px;">Postuler</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POURQUOI NOUS REJOINDRE -->
+  <section id="pourquoi-nous" class="decorative-section" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%); padding: 80px 0; position: relative; overflow: hidden;">
+    <div class="container" style="position: relative; z-index: 1;">
+      <div class="decorative-header">
+        <h2 class="section-title reveal" style="color: #1e293b; font-size: 2.5rem; font-weight: 700; text-align: center; margin-bottom: 20px;">Pourquoi nous rejoindre ?</h2>
+        <div class="decorative-line" style="width: 100px; height: 4px; background: var(--accent); margin: 0 auto 30px; border-radius: 2px;"></div>
+        <p class="reveal" style="text-align: center; color: #64748b; font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Découvrez les avantages de travailler chez YOON et contribuez à transformer l'accès au droit au Sénégal.</p>
+      </div>
+
+      <div class="about-features">
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="var(--accent)"/>
+              <circle cx="12" cy="12" r="3" fill="var(--accent)"/>
+            </svg>
+          </div>
+          <h4>Innovation Technologique</h4>
+          <p>Travaillez avec les dernières technologies : IA, chatbots, génération automatique de documents.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 4C16.55 4 17 4.45 17 5S16.55 6 16 6 15 5.55 15 5 15.45 4 16 4M16 6.5C17.38 6.5 18.5 7.62 18.5 9S17.38 11.5 16 11.5 13.5 10.38 13.5 9 14.62 6.5 16 6.5M16 13C19.32 13 22 15.68 22 19V21H10V19C10 15.68 12.68 13 16 13Z" fill="var(--accent)"/>
+              <path d="M8 4C8.55 4 9 4.45 9 5S8.55 6 8 6 7 5.55 7 5 7.45 4 8 4M8 6.5C9.38 6.5 10.5 7.62 10.5 9S9.38 11.5 8 11.5 5.5 10.38 5.5 9 6.62 6.5 8 6.5M8 13C11.32 13 14 15.68 14 19V21H2V19C2 15.68 4.68 13 8 13Z" fill="var(--accent)" opacity="0.6"/>
+            </svg>
+          </div>
+          <h4>Impact Social</h4>
+          <p>Contribuez à démocratiser l'accès au droit et à améliorer la justice au Sénégal.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 2H17C18.11 2 19 2.9 19 4V20C19 21.11 18.11 22 17 22H7C5.9 22 5 21.11 5 20V4C5 2.9 5.9 2 7 2M7 4V8H17V4H7M7 10V12H9V10H7M11 10V12H13V10H11M15 10V12H17V10H15M7 14V16H9V14H7M11 14V16H13V14H11M15 14V16H17V14H15M7 18V20H9V18H7M11 18V20H13V18H11M15 18V20H17V18H15Z" fill="var(--accent)"/>
+            </svg>
+          </div>
+          <h4>Évolution Professionnelle</h4>
+          <p>Formation continue, opportunités de croissance et environnement de travail stimulant.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1M10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z" fill="var(--accent)"/>
+            </svg>
+          </div>
+          <h4>Équilibre Vie-Travail</h4>
+          <p>Horaires flexibles, télétravail possible et équipe soudée pour un bien-être optimal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULAIRE DE CANDIDATURE -->
+  <section id="candidature">
+    <div class="container">
+      <h2 class="section-title reveal">Postulez maintenant</h2>
+      <p class="muted reveal">Remplissez ce formulaire pour nous envoyer votre candidature. Nous reviendrons vers vous rapidement.</p>
+      <div class="contact-grid reveal">
+        <div class="contact-info">
+          <h3>Informations importantes</h3>
+          <p><strong>Processus de recrutement :</strong> Entretien téléphonique → Test technique → Entretien final</p>
+          <p><strong>Délai de réponse :</strong> 5-7 jours ouvrés</p>
+          <p><strong>Contact RH :</strong> <a href="mailto:recrutement@yoon.sn">recrutement@yoon.sn</a></p>
+          <p><strong>Adresse :</strong> Dakar, Sénégal</p>
+        </div>
+        <form class="contact-form">
+          <h3>Votre candidature</h3>
+          <div class="form-group">
+            <label for="poste">Poste souhaité</label>
+            <select id="poste" name="poste" required>
+              <option value="">Sélectionnez un poste</option>
+              <option value="avocat-junior">Avocat Junior</option>
+              <option value="developpeur-fullstack">Développeur Full-Stack</option>
+              <option value="consultant-juridique">Consultant Juridique</option>
+              <option value="specialiste-marketing">Spécialiste Marketing Digital</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="nom">Nom complet</label>
+            <input type="text" id="nom" name="nom" placeholder="Votre nom complet" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="votre.email@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="+221 XX XXX XX XX" required>
+          </div>
+          <div class="form-group">
+            <label for="experience">Années d'expérience</label>
+            <select id="experience" name="experience" required>
+              <option value="">Sélectionnez</option>
+              <option value="0-1">0-1 an</option>
+              <option value="1-3">1-3 ans</option>
+              <option value="3-5">3-5 ans</option>
+              <option value="5+">Plus de 5 ans</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cv">CV (PDF, max 5MB)</label>
+            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+          </div>
+          <div class="form-group">
+            <label for="lettre">Lettre de motivation (optionnel)</label>
+            <textarea id="lettre" name="lettre" rows="4" placeholder="Présentez-vous brièvement..."></textarea>
+          </div>
+          <div class="form-group">
+            <label>
+              <input type="checkbox" name="consentement" required>
+              J'accepte que mes données soient traitées conformément à la politique de confidentialité.
+            </label>
+          </div>
+          <button type="submit" class="btn">Envoyer ma candidature</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer style="background: linear-gradient(135deg, #08132d 0%, #071227 50%, #0a1a3a 100%); padding: 60px 20px 30px; position: relative; overflow: hidden;">
+  <div class="container" style="position: relative; z-index: 1; max-width: 1200px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-bottom: 40px;">
+      <div class="footer-section">
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+          <img src="logoyoon" alt="yoon" style="width: 50px; height: 50px; border-radius: 12px; margin-right: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+          <div>
+            <h3 style="color: #fff; margin: 0; font-size: 28px; font-weight: 700;">YOON</h3>
+            <p style="color: var(--muted); margin: 0; font-size: 14px;">Legal‑Tech Sénégal</p>
+          </div>
+        </div>
+        <p style="color: var(--muted); line-height: 1.7; margin: 0;">Votre assistant juridique au Sénégal.</p>
+      </div>
+      <div class="footer-section">
+        <h4 style="color: #fff; margin-bottom: 20px;">Liens rapides</h4>
+        <a href="index.html" style="color: var(--muted); text-decoration: none; display: block; padding: 5px 0;">Accueil</a>
+        <a href="mentorat.html" style="color: var(--muted); text-decoration: none; display: block; padding: 5px 0;">Mentorat</a>
+        <a href="inscription.html" style="color: var(--muted); text-decoration: none; display: block; padding: 5px 0;">Inscription</a>
+        <a href="offres-emploi.html" style="color: var(--muted); text-decoration: none; display: block; padding: 5px 0;">Emploi</a>
+      </div>
+    </div>
+    <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 30px; text-align: center;">
+      <p style="color: var(--muted); margin: 0;">&copy; 2024 YOON - Legal-Tech Sénégal. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+

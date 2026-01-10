@@ -1,0 +1,513 @@
+/* Cabinet Avocate - Enhanced Blue Theme */
+:root {
+  --bg: #0f1724;
+  --accent: #3b82f6; /* Blue accent */
+  --accent-secondary: #06b6d4; /* Cyan */
+  --accent-tertiary: #a855f7; /* Purple */
+  --muted: #94a3b8;
+  --card: #0b1220;
+  --glass: rgba(255, 255, 255, 0.04);
+  --success: #16a34a;
+  --danger: #ef4444;
+  --text-primary: #ffffff;
+  --text-secondary: #e2e8f0;
+  --shadow-light: rgba(59, 130, 246, 0.1);
+  --shadow-medium: rgba(59, 130, 246, 0.2);
+  --shadow-strong: rgba(59, 130, 246, 0.3);
+}
+
+/* Override global accent with blue theme */
+.nav-links a:hover::before,
+.nav-links a:hover::after {
+  background: linear-gradient(90deg, var(--accent), #06b6d4);
+}
+
+.hero::after {
+  background:
+    radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(14, 165, 233, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.1) 0%, transparent 40%);
+}
+
+.service-card::before {
+  background: linear-gradient(135deg,
+    rgba(59, 130, 246, 0.1),
+    rgba(14, 165, 233, 0.1),
+    rgba(168, 85, 247, 0.08)
+  );
+}
+
+.service-card:hover {
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(59, 130, 246, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.feature-card::before {
+  background: linear-gradient(135deg,
+    rgba(59, 130, 246, 0.1),
+    rgba(14, 165, 233, 0.1),
+    rgba(168, 85, 247, 0.08)
+  );
+}
+
+.feature-card:hover {
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(59, 130, 246, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.contact-info::before {
+  background: linear-gradient(135deg,
+    rgba(59, 130, 246, 0.1),
+    rgba(14, 165, 233, 0.1),
+    rgba(168, 85, 247, 0.08)
+  );
+}
+
+.contact-info:hover {
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(59, 130, 246, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.contact-form::before {
+  background: linear-gradient(135deg,
+    rgba(14, 165, 233, 0.1),
+    rgba(59, 130, 246, 0.1),
+    rgba(168, 85, 247, 0.08)
+  );
+}
+
+.contact-form:hover {
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(14, 165, 233, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+/* Blue theme specific styles */
+.hero .floating-particle {
+  background: var(--accent);
+}
+
+.hero .floating-particle:nth-child(2) {
+  background: #06b6d4;
+}
+
+.hero .floating-particle:nth-child(3) {
+  background: #a855f7;
+}
+
+/* Blue accent for particles */
+#services .particle,
+#features .particle,
+#contact .particle {
+  background: var(--accent);
+}
+
+/* Blue theme for buttons */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), #06b6d4);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Enhanced styling for Maître Niang page */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(14, 165, 233, 0.1));
+  z-index: 0;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 600px;
+}
+
+.btn {
+  background: linear-gradient(135deg, var(--accent), #06b6d4);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-secondary:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), #06b6d4);
+  border-radius: 2px;
+}
+
+.service-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(14, 165, 233, 0.05));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.contact-info {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-info h3 {
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+  color: var(--muted);
+}
+
+.contact-info a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-form {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-form h3 {
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: white;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Animation for reveal elements */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cabinet Cards Styling */
+.cabinet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.cabinet-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.cabinet-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--shadow-light), var(--shadow-medium));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cabinet-card:hover::before {
+  opacity: 1;
+}
+
+.cabinet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px var(--shadow-strong);
+  border-color: var(--accent);
+}
+
+.cabinet-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cabinet-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cabinet-header h3 {
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.cabinet-details {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cabinet-details p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.location-info {
+  margin-top: 1rem;
+}
+
+.location-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.location-icon {
+  font-size: 1.2rem;
+  margin-right: 0.75rem;
+  color: var(--accent);
+  min-width: 20px;
+}
+
+.location-item span {
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.cabinet-source {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Map Section Styling */
+.map-container {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 2rem;
+}
+
+.map-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.map-header h3 {
+  color: var(--text-primary);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.map-header p {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.map-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Grid Styling */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .cabinet-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cabinet-card {
+    padding: 1.25rem;
+  }
+}

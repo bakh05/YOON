@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cabinet d'Avocate — YOON Legal-Tech Sénégal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cabinet-avocate.css">
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</head>
+<body>
+<header>
+  <nav class="nav container">
+    <div class="brand">
+      <img src="logoyoon" alt="yoon" class="logo">
+      <div class="muted">Legal‑Tech Sénégal</div>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="#services">Services</a>
+      <a href="#features">Fonctionnalités</a>
+      <a href="mentorat.html">Mentorat</a>
+      <a href="#about">À propos</a>
+    </div>
+    <div class="lang-selector">
+      <select id="langSelect">
+        <option value="fr">Fr</option>
+        <option value="en">En</option>
+        <option value="wo">Wol</option>
+        <option value="ar">Ar</option>
+      </select>
+    </div>
+    <button class="menu-toggle" aria-label="menu">☰</button>
+  </nav>
+</header>
+
+<main>
+  <section id="hero" class="hero" style="background-image: url('image/AI%20in%20Legal.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+    <div class="hero-left container" style="position: relative; z-index: 1;">
+      <h1 class="reveal">Cabinet d'Avocate</h1>
+      <p class="reveal">Découvrez une sélection de cabinets d'avocats au Sénégal, spécialisés dans divers domaines du droit. Nous mettons en relation les clients avec des professionnels qualifiés pour leurs besoins juridiques.</p>
+      <div class="buttons reveal">
+        <a class="btn" href="https://wa.me/221766902590" target="_blank">Demander un devis</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about-cabinet">
+    <div class="container">
+      <h2 class="section-title reveal">À propos des Cabinets d'Avocats</h2>
+      <p class="muted reveal">Les cabinets d'avocats au Sénégal offrent une gamme complète de services juridiques. Que ce soit pour du conseil, du contentieux ou des transactions, ces professionnels sont là pour vous accompagner dans vos démarches légales.</p>
+      <div class="grid reveal">
+        <div class="service-card">
+          <div class="service-icon">⚖️</div>
+          <h3>Conseil Juridique</h3>
+          <p>Accompagnement personnalisé pour vos questions juridiques quotidiennes.</p>
+          <div class="service-features">
+            <span>• Analyse de situation</span>
+            <span>• Prévention des litiges</span>
+            <span>• Stratégies juridiques</span>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📋</div>
+          <h3>Contentieux</h3>
+          <p>Représentation et défense devant les tribunaux pour tous types de litiges.</p>
+          <div class="service-features">
+            <span>• Procédures civiles</span>
+            <span>• Contentieux commercial</span>
+            <span>• Défense pénale</span>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📄</div>
+          <h3>Rédaction d'Actes</h3>
+          <p>Élaboration de contrats, statuts et autres documents juridiques.</p>
+          <div class="service-features">
+            <span>• Contrats commerciaux</span>
+            <span>• Statuts d'entreprise</span>
+            <span>• Actes notariés</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cabinet-list">
+    <div class="container">
+      <h2 class="section-title reveal">Cabinets d'Avocats Recommandés</h2>
+      <p class="muted reveal">Découvrez une sélection de cabinets d'avocats actifs au Sénégal, spécialisés dans divers domaines juridiques. Ces cabinets offrent des services de qualité pour répondre à vos besoins.</p>
+
+      <div class="cabinet-grid reveal">
+        <div class="cabinet-card" onclick="toggleCabinetDetails(this)">
+          <div class="cabinet-header">
+            <div class="cabinet-icon">⚖️</div>
+            <h3>Maitre Ndéye Fatou TOURÉ AVOCAT</h3>
+          </div>
+          <div class="cabinet-details hidden">
+            <p><strong>Spécialisations :</strong> Droit civil, droit de la famille, contrats, état civil.</p>
+            <div class="location-info">
+              <div class="location-item">
+                <span class="location-icon">📍</span>
+                <span><strong>Adresse :</strong> 25 Avenue Léopold Sédar Senghor, Dakar</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">📞</span>
+                <span><strong>Téléphone :</strong> +221 33 889 12 34</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">✉️</span>
+                <span><strong>Email :</strong> ntoure@legalfield.sn</span>
+              </div>
+            </div>
+          </div>
+          <p class="cabinet-source"><strong>Source :</strong> LEGALFIELD AVOCATS</p>
+        </div>
+
+        <div class="cabinet-card" onclick="toggleCabinetDetails(this)">
+          <div class="cabinet-header">
+            <div class="cabinet-icon">⚖️</div>
+            <h3>Cabinet d'Avocats Maître Ibrahima GUEYE</h3>
+          </div>
+          <div class="cabinet-details hidden">
+            <p><strong>Spécialisations :</strong> Cabinet d'avocats généraliste avec intervention possible en droit civil.</p>
+            <div class="location-info">
+              <div class="location-item">
+                <span class="location-icon">📍</span>
+                <span><strong>Adresse :</strong> 8 Rue de la République, Plateau, Dakar</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">📞</span>
+                <span><strong>Téléphone :</strong> +221 33 821 78 90</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">✉️</span>
+                <span><strong>Email :</strong> igueye@avocat-dakar.sn</span>
+              </div>
+            </div>
+          </div>
+          <p class="cabinet-source"><strong>Source :</strong> WorldPlaces Sénégal</p>
+        </div>
+
+        <div class="cabinet-card" onclick="toggleCabinetDetails(this)">
+          <div class="cabinet-header">
+            <div class="cabinet-icon">⚖️</div>
+            <h3>Cabinet d'Avocats Houda | Houda Law Firm</h3>
+          </div>
+          <div class="cabinet-details hidden">
+            <p><strong>Spécialisations :</strong> Cabinet établi à Dakar, droit civil et autres domaines.</p>
+            <div class="location-info">
+              <div class="location-item">
+                <span class="location-icon">📍</span>
+                <span><strong>Adresse :</strong> 42 Boulevard de la République, Dakar</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">📞</span>
+                <span><strong>Téléphone :</strong> +221 33 889 45 67</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">✉️</span>
+                <span><strong>Email :</strong> contact@houldalaw.sn</span>
+              </div>
+            </div>
+          </div>
+          <p class="cabinet-source"><strong>Source :</strong> IFLR1000</p>
+        </div>
+
+        <div class="cabinet-card" onclick="toggleCabinetDetails(this)">
+          <div class="cabinet-header">
+            <div class="cabinet-icon">⚖️</div>
+            <h3>Cabinet Maître Ahmed SALL</h3>
+          </div>
+          <div class="cabinet-details hidden">
+            <p><strong>Spécialisations :</strong> Avocat à la Cour intervenant aussi en droit civil (conseil et contentieux).</p>
+            <div class="location-info">
+              <div class="location-item">
+                <span class="location-icon">📍</span>
+                <span><strong>Adresse :</strong> 12 Rue Kébé, Plateau, Dakar</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">📞</span>
+                <span><strong>Téléphone :</strong> +221 33 821 23 45</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">✉️</span>
+                <span><strong>Email :</strong> asall@avocat-sall.sn</span>
+              </div>
+            </div>
+          </div>
+          <p class="cabinet-source"><strong>Source :</strong> Rentech Digital</p>
+        </div>
+
+        <div class="cabinet-card" onclick="toggleCabinetDetails(this)">
+          <div class="cabinet-header">
+            <div class="cabinet-icon">⚖️</div>
+            <h3>AVOCATS - CABINET TREIZZ / Michel S. BASSE & Joseph D. DIOP</h3>
+          </div>
+          <div class="cabinet-details hidden">
+            <p><strong>Spécialisations :</strong> Cabinet généraliste souvent compétent pour affaires civiles.</p>
+            <div class="location-info">
+              <div class="location-item">
+                <span class="location-icon">📍</span>
+                <span><strong>Adresse :</strong> 18 Rue Jules Ferry, Plateau, Dakar</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">📞</span>
+                <span><strong>Téléphone :</strong> +221 33 821 56 78</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">✉️</span>
+                <span><strong>Email :</strong> contact@cabinet-treizz.sn</span>
+              </div>
+            </div>
+          </div>
+          <p class="cabinet-source"><strong>Source :</strong> Rentech Digital</p>
+        </div>
+
+        <div class="cabinet-card" onclick="toggleCabinetDetails(this)">
+          <div class="cabinet-header">
+            <div class="cabinet-icon">⚖️</div>
+            <h3>Cabinet Maître Souleymane Soumaré - MSS Avocat</h3>
+          </div>
+          <div class="cabinet-details hidden">
+            <p><strong>Spécialisations :</strong> Avocat en droit civil et autres domaines.</p>
+            <div class="location-info">
+              <div class="location-item">
+                <span class="location-icon">📍</span>
+                <span><strong>Adresse :</strong> 30 Avenue Pompidou, Dakar</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">📞</span>
+                <span><strong>Téléphone :</strong> +221 33 889 67 89</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">✉️</span>
+                <span><strong>Email :</strong> ssoumare@mss-avocat.sn</span>
+              </div>
+            </div>
+          </div>
+          <p class="cabinet-source"><strong>Source :</strong> Rentech Digital</p>
+        </div>
+
+        <div class="cabinet-card" onclick="toggleCabinetDetails(this)">
+          <div class="cabinet-header">
+            <div class="cabinet-icon">⚖️</div>
+            <h3>ADK Cabinet d'Avocats Me Abdou Dialy KANE</h3>
+          </div>
+          <div class="cabinet-details hidden">
+            <p><strong>Spécialisations :</strong> Cabinet avec services juridiques divers.</p>
+            <div class="location-info">
+              <div class="location-item">
+                <span class="location-icon">📍</span>
+                <span><strong>Adresse :</strong> 5 Rue de la Médina, Plateau, Dakar</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">📞</span>
+                <span><strong>Téléphone :</strong> +221 33 821 90 12</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">✉️</span>
+                <span><strong>Email :</strong> akane@adk-avocats.sn</span>
+              </div>
+            </div>
+          </div>
+          <p class="cabinet-source"><strong>Source :</strong> Rentech Digital</p>
+        </div>
+
+        <div class="cabinet-card" onclick="toggleCabinetDetails(this)">
+          <div class="cabinet-header">
+            <div class="cabinet-icon">⚖️</div>
+            <h3>Lexisen Avocats</h3>
+          </div>
+          <div class="cabinet-details hidden">
+            <p><strong>Spécialisations :</strong> Cabinet avec expertise variée, droit civil inclus.</p>
+            <div class="location-info">
+              <div class="location-item">
+                <span class="location-icon">📍</span>
+                <span><strong>Adresse :</strong> 22 Boulevard Martin Luther King, Dakar</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">📞</span>
+                <span><strong>Téléphone :</strong> +221 33 889 34 56</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">✉️</span>
+                <span><strong>Email :</strong> contact@lexisen.sn</span>
+              </div>
+            </div>
+          </div>
+          <p class="cabinet-source"><strong>Source :</strong> Rentech Digital</p>
+        </div>
+
+        <div class="cabinet-card" onclick="toggleCabinetDetails(this)">
+          <div class="cabinet-header">
+            <div class="cabinet-icon">⚖️</div>
+            <h3>Cabinet Maître Mouhamadou Bamba Cissé Avocat à la Cour</h3>
+          </div>
+          <div class="cabinet-details hidden">
+            <p><strong>Spécialisations :</strong> Avocat intervenant aussi en matière civile.</p>
+            <div class="location-info">
+              <div class="location-item">
+                <span class="location-icon">📍</span>
+                <span><strong>Adresse :</strong> 9 Rue Blaise Diagne, Plateau, Dakar</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">📞</span>
+                <span><strong>Téléphone :</strong> +221 33 821 78 90</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">✉️</span>
+                <span><strong>Email :</strong> mcisse@avocat-cisse.sn</span>
+              </div>
+            </div>
+          </div>
+          <p class="cabinet-source"><strong>Source :</strong> Rentech Digital</p>
+        </div>
+
+        <div class="cabinet-card" onclick="toggleCabinetDetails(this)">
+          <div class="cabinet-header">
+            <div class="cabinet-icon">⚖️</div>
+            <h3>Cabinet Maître Aïssata Tall Sall et Associés</h3>
+          </div>
+          <div class="cabinet-details hidden">
+            <p><strong>Spécialisations :</strong> Cabinet intervenant dans divers domaines y compris droit civil.</p>
+            <div class="location-info">
+              <div class="location-item">
+                <span class="location-icon">📍</span>
+                <span><strong>Adresse :</strong> 14 Avenue Cheikh Anta Diop, Dakar</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">📞</span>
+                <span><strong>Téléphone :</strong> +221 33 889 78 90</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">✉️</span>
+                <span><strong>Email :</strong> atsall@cabinet-ats.sn</span>
+              </div>
+            </div>
+          </div>
+          <p class="cabinet-source"><strong>Source :</strong> Rentech Digital</p>
+        </div>
+
+        <div class="cabinet-card" onclick="toggleCabinetDetails(this)">
+          <div class="cabinet-header">
+            <div class="cabinet-icon">⚖️</div>
+            <h3>GENI & KEBE</h3>
+          </div>
+          <div class="cabinet-details hidden">
+            <p><strong>Spécialisations :</strong> Grand cabinet avec pratique en contentieux (civil/affaires).</p>
+            <div class="location-info">
+              <div class="location-item">
+                <span class="location-icon">📍</span>
+                <span><strong>Adresse :</strong> 35 Boulevard de la République, Dakar</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">📞</span>
+                <span><strong>Téléphone :</strong> +221 33 889 12 34</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">✉️</span>
+                <span><strong>Email :</strong> contact@geni-kebe.sn</span>
+              </div>
+            </div>
+          </div>
+          <p class="cabinet-source"><strong>Source :</strong> Chambers</p>
+        </div>
+
+        <div class="cabinet-card" onclick="toggleCabinetDetails(this)">
+          <div class="cabinet-header">
+            <div class="cabinet-icon">⚖️</div>
+            <h3>SCP Wane-fall et associés</h3>
+          </div>
+          <div class="cabinet-details hidden">
+            <p><strong>Spécialisations :</strong> Étude d'avocats pouvant traiter des litiges civils.</p>
+            <div class="location-info">
+              <div class="location-item">
+                <span class="location-icon">📍</span>
+                <span><strong>Adresse :</strong> 7 Rue Joseph Gomis, Plateau, Dakar</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">📞</span>
+                <span><strong>Téléphone :</strong> +221 33 821 45 67</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">✉️</span>
+                <span><strong>Email :</strong> contact@scp-wanefall.sn</span>
+              </div>
+            </div>
+          </div>
+          <p class="cabinet-source"><strong>Source :</strong> Rentech Digital</p>
+        </div>
+
+        <div class="cabinet-card" onclick="toggleCabinetDetails(this)">
+          <div class="cabinet-header">
+            <div class="cabinet-icon">⚖️</div>
+            <h3>Cabinet Ngagne Me Ciré Cledor LY</h3>
+          </div>
+          <div class="cabinet-details hidden">
+            <p><strong>Spécialisations :</strong> Avocat inscrit au barreau, droit civil & autres domaines.</p>
+            <div class="location-info">
+              <div class="location-item">
+                <span class="location-icon">📍</span>
+                <span><strong>Adresse :</strong> 28 Rue El Hadj Amadou Assane Ndoye, Dakar</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">📞</span>
+                <span><strong>Téléphone :</strong> +221 33 889 56 78</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">✉️</span>
+                <span><strong>Email :</strong> cly@cabinet-ngagne.sn</span>
+              </div>
+            </div>
+          </div>
+          <p class="cabinet-source"><strong>Source :</strong> Chambers</p>
+        </div>
+
+        <div class="cabinet-card" onclick="toggleCabinetDetails(this)">
+          <div class="cabinet-header">
+            <div class="cabinet-icon">⚖️</div>
+            <h3>Avocat Cheikh Fall</h3>
+          </div>
+          <div class="cabinet-details hidden">
+            <p><strong>Spécialisations :</strong> Cabinet d'avocat expérimenté (services civils/affaires).</p>
+            <div class="location-info">
+              <div class="location-item">
+                <span class="location-icon">📍</span>
+                <span><strong>Adresse :</strong> 16 Place de l'Indépendance, Dakar</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">📞</span>
+                <span><strong>Téléphone :</strong> +221 33 821 89 01</span>
+              </div>
+              <div class="location-item">
+                <span class="location-icon">✉️</span>
+                <span><strong>Email :</strong> cfall@avocat-fall.sn</span>
+              </div>
+            </div>
+          </div>
+          <p class="cabinet-source"><strong>Source :</strong> Cheikh Fall</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="map">
+    <div class="container">
+      <div class="map-container reveal">
+        <div class="map-header">
+          <h3>Carte Interactive des Cabinets</h3>
+          <p>Explorez les emplacements exacts de nos cabinets partenaires</p>
+        </div>
+        <div class="map-wrapper">
+          <div id="map" style="height: 400px; width: 100%; border-radius: 12px;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title reveal">Contactez-nous</h2>
+      <div class="contact-grid reveal">
+        <div class="contact-info">
+          <h3>Informations de contact</h3>
+          <p><strong>Adresse :</strong> Dakar, Sénégal</p>
+          <p><strong>Téléphone :</strong> <a href="tel:+221766902590">+221 76 690 2590</a></p>
+          <p><strong>Email :</strong> <a href="mailto:contact@yoon.sn">contact@yoon.sn</a></p>
+        </div>
+        <form class="contact-form">
+          <h3>Envoyez-nous un message</h3>
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+          </div>
+          <div class="form-group">
+            <label for="cabinet">Sélectionnez un cabinet</label>
+            <select id="cabinet" name="cabinet" required>
+              <option value="">Choisissez un cabinet</option>
+              <option value="cabinet-avocate">Cabinet d'Avocate</option>
+              <option value="cabinet-droit-civil">Cabinet de Droit Civil</option>
+              <option value="cabinet-droit-commercial">Cabinet de Droit Commercial</option>
+              <option value="cabinet-droit-famille">Cabinet de Droit de la Famille</option>
+              <option value="cabinet-droit-fiscal">Cabinet de Droit Fiscal</option>
+              <option value="cabinet-droit-penal">Cabinet de Droit Pénal</option>
+              <option value="cabinet-droit-travail">Cabinet de Droit du Travail</option>
+              <option value="cabinet-notaire">Cabinet de Notaire</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Votre email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+          </div>
+          <button type="submit" class="btn">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer style="background: linear-gradient(135deg, #08132d 0%, #071227 50%, #0a1a3a 100%); padding: 60px 20px 30px; position: relative; overflow: hidden;">
+  <div class="container" style="position: relative; z-index: 1; max-width: 1200px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-bottom: 40px;">
+      <div class="footer-section">
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+          <img src="logoyoon" alt="yoon" style="width: 50px; height: 50px; border-radius: 12px; margin-right: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+          <div>
+            <h3 style="color: #fff; margin: 0; font-size: 28px; font-weight: 700;">YOON</h3>
+            <p style="color: var(--muted); margin: 0; font-size: 14px;">Legal‑Tech Sénégal</p>
+          </div>
+        </div>
+        <p style="color: var(--muted); line-height: 1.7; margin: 0;">Votre assistant juridique au Sénégal.</p>
+      </div>
+      <div class="footer-section">
+        <h4 style="color: #fff; margin-bottom: 20px;">Liens rapides</h4>
+        <a href="index.html" style="color: var(--muted); text-decoration: none; display: block; padding: 5px 0;">Accueil</a>
+        <a href="mentorat.html" style="color: var(--muted); text-decoration: none; display: block; padding: 5px 0;">Mentorat</a>
+        <a href="inscription.html" style="color: var(--muted); text-decoration: none; display: block; padding: 5px 0;">Inscription</a>
+      </div>
+    </div>
+    <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 30px; text-align: center;">
+      <p style="color: var(--muted); margin: 0;">&copy; 2024 YOON - Legal-Tech Sénégal. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+

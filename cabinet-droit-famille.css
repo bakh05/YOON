@@ -1,0 +1,112 @@
+/* Cabinet Droit Famille - Purple Theme */
+:root {
+  --bg: #0f1724;
+  --accent: #a855f7; /* Purple accent */
+  --muted: #94a3b8;
+  --card: #0b1220;
+  --glass: rgba(255, 255, 255, 0.04);
+  --success: #16a34a;
+  --danger: #ef4444;
+}
+
+/* Override global accent with purple theme */
+.nav-links a:hover::before,
+.nav-links a:hover::after {
+  background: linear-gradient(90deg, var(--accent), #c084fc);
+}
+
+.hero::after {
+  background:
+    radial-gradient(circle at 10% 20%, rgba(168, 85, 247, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(192, 132, 252, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.1) 0%, transparent 40%);
+}
+
+.service-card::before {
+  background: linear-gradient(135deg,
+    rgba(168, 85, 247, 0.1),
+    rgba(192, 132, 252, 0.1),
+    rgba(14, 165, 233, 0.08)
+  );
+}
+
+.service-card:hover {
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(168, 85, 247, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.feature-card::before {
+  background: linear-gradient(135deg,
+    rgba(168, 85, 247, 0.1),
+    rgba(192, 132, 252, 0.1),
+    rgba(14, 165, 233, 0.08)
+  );
+}
+
+.feature-card:hover {
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(168, 85, 247, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.contact-info::before {
+  background: linear-gradient(135deg,
+    rgba(168, 85, 247, 0.1),
+    rgba(192, 132, 252, 0.1),
+    rgba(14, 165, 233, 0.08)
+  );
+}
+
+.contact-info:hover {
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(168, 85, 247, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.contact-form::before {
+  background: linear-gradient(135deg,
+    rgba(192, 132, 252, 0.1),
+    rgba(168, 85, 247, 0.1),
+    rgba(14, 165, 233, 0.08)
+  );
+}
+
+.contact-form:hover {
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(192, 132, 252, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+/* Purple theme specific styles */
+.hero .floating-particle {
+  background: var(--accent);
+}
+
+.hero .floating-particle:nth-child(2) {
+  background: #c084fc;
+}
+
+.hero .floating-particle:nth-child(3) {
+  background: #06b6d4;
+}
+
+/* Purple accent for particles */
+#services .particle,
+#features .particle,
+#contact .particle {
+  background: var(--accent);
+}
+
+/* Purple theme for buttons */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), #c084fc);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4);
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cabinet de Droit Fiscal — YOON Legal-Tech Sénégal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <nav class="nav container">
+    <div class="brand">
+      <img src="logoyoon" alt="yoon" class="logo">
+      <div class="muted">Legal‑Tech Sénégal</div>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="#services">Services</a>
+      <a href="#features">Fonctionnalités</a>
+      <a href="mentorat.html">Mentorat</a>
+      <a href="#about">À propos</a>
+      <a href="inscription.html" class="cta">Inscription</a>
+    </div>
+    <div class="lang-selector">
+      <select id="langSelect">
+        <option value="fr">Fr</option>
+        <option value="en">En</option>
+        <option value="wo">Wol</option>
+        <option value="ar">Ar</option>
+      </select>
+    </div>
+    <button class="menu-toggle" aria-label="menu">☰</button>
+  </nav>
+</header>
+
+<main>
+  <section id="hero" class="hero" style="background-image: url('image/AI%20in%20Legal.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+    <div class="hero-left container" style="position: relative; z-index: 1;">
+      <h1 class="reveal">Cabinet de Droit Fiscal</h1>
+      <p class="reveal">Optimisation fiscale et conformité : conseils fiscaux, déclarations et contentieux fiscal au Sénégal.</p>
+      <div class="buttons reveal">
+        <a class="btn btn-primary" href="inscription.html">S'inscrire</a>
+        <a class="btn" href="https://wa.me/221766902590" target="_blank">Demander un devis</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about-cabinet">
+    <div class="container">
+      <h2 class="section-title reveal">À propos du Cabinet</h2>
+      <p class="muted reveal">Notre équipe d'experts fiscaux vous aide à optimiser votre fiscalité tout en respectant la législation sénégalaise. Nous assurons votre conformité fiscale complète.</p>
+      <div class="grid reveal">
+        <div class="service-card">
+          <h3>Conseils Fiscaux</h3>
+          <p>Stratégies d'optimisation fiscale personnalisées.</p>
+        </div>
+        <div class="service-card">
+          <h3>Déclarations Fiscales</h3>
+          <p>Préparation et dépôt de toutes vos déclarations.</p>
+        </div>
+        <div class="service-card">
+          <h3>Contentieux Fiscal</h3>
+          <p>Défense lors de contrôles et litiges fiscaux.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="location">
+    <div class="container">
+      <h2 class="section-title reveal">Notre Localisation</h2>
+      <p class="muted reveal">Situé au cœur de Ziguinchor, notre cabinet est facilement accessible pour vous servir.</p>
+      <div style="margin-top: 20px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.5!2d-16.2719!3d12.5550!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDMzJzE4LjAiTiAxN8KwMTYnMTguNyJX!5e0!3m2!1sfr!2ssn!4v1703123456789!5m2!1sfr!2ssn" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title reveal">Contactez-nous</h2>
+      <div class="contact-grid reveal">
+        <div class="contact-info">
+          <h3>Informations de contact</h3>
+          <p><strong>Adresse :</strong> Ziguinchor, Sénégal</p>
+          <p><strong>Téléphone :</strong> <a href="tel:+221766902590">+221 76 690 2590</a></p>
+          <p><strong>Email :</strong> <a href="mailto:contact@yoon.sn">contact@yoon.sn</a></p>
+        </div>
+        <form class="contact-form">
+          <h3>Envoyez-nous un message</h3>
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Votre email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+          </div>
+          <button type="submit" class="btn">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer style="background: linear-gradient(135deg, #08132d 0%, #071227 50%, #0a1a3a 100%); padding: 60px 20px 30px; position: relative; overflow: hidden;">
+  <div class="container" style="position: relative; z-index: 1; max-width: 1200px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-bottom: 40px;">
+      <div class="footer-section">
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+          <img src="logoyoon" alt="yoon" style="width: 50px; height: 50px; border-radius: 12px; margin-right: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+          <div>
+            <h3 style="color: #fff; margin: 0; font-size: 28px; font-weight: 700;">YOON</h3>
+            <p style="color: var(--muted); margin: 0; font-size: 14px;">Legal‑Tech Sénégal</p>
+          </div>
+        </div>
+        <p style="color: var(--muted); line-height: 1.7; margin: 0;">Votre assistant juridique au Sénégal.</p>
+      </div>
+      <div class="footer-section">
+        <h4 style="color: #fff; margin-bottom: 20px;">Liens rapides</h4>
+        <a href="index.html" style="color: var(--muted); text-decoration: none; display: block; padding: 5px 0;">Accueil</a>
+        <a href="mentorat.html" style="color: var(--muted); text-decoration: none; display: block; padding: 5px 0;">Mentorat</a>
+        <a href="inscription.html" style="color: var(--muted); text-decoration: none; display: block; padding: 5px 0;">Inscription</a>
+      </div>
+    </div>
+    <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 30px; text-align: center;">
+      <p style="color: var(--muted); margin: 0;">&copy; 2024 YOON - Legal-Tech Sénégal. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
